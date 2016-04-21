@@ -11,7 +11,7 @@ brew install $(cat "$DOTFILES_DIR/brew_leaves.txt")
 brew tap caskroom/cask
 
 # build symlink for every cask app install
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # install cask apps
 brew cask install $(cat "$DOTFILES_DIR/brew_cask_list.txt")
