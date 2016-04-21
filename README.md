@@ -29,55 +29,78 @@ source backup_brew.sh # store a brew_leaves.txt
 1. Install Xcode from MacStore <https://itunes.apple.com/hk/app/xcode/id497799835>
 1. ~~Install Xcode Command Line Tools in Xcode app~~
 1. check if Xcode is installed
-```
-xcode-select -p # expect return: /Applications/Xcode.app/Contents/Developer
-```
+
+  ```
+  xcode-select -p # expect return: /Applications/Xcode.app/Contents/Developer
+  ```
+
 1. check if Xcode Command Line Tool is installed (I have it installed with original Xcode from App Store)
-```
-gcc --version
-```
-1. config Git
-```
-cd ~
-git config --global user.name "Edditoria"
-git config --global user.email "edditoria@gmail.com"
-git config --list
-```
-1. clone this repo to `~/dev/dotfiles` \#todo
-```
-cd ~ && mkdir dev && cd dev
-git clone [link to repo here]
-```
+
+  ```
+  gcc --version
+  ```
+
+1. config Git \**remember to change your info*
+
+  ```
+  cd ~
+  git config --global user.name "Your Name"
+  git config --global user.email "your@email.com"
+  git config --list
+  ```
+
 1. config GitLab \#todo use HTTPS instead of SSH
-	- Generate SSH Key
-	```
-	ssh-keygen -t rsa -C "edditoria@gmail.com" # pwd = s
-	cat ~/.ssh/id_rsa.pub # Show SSH key
-	pbcopy < ~/.ssh/id_rsa.pub # Copy SSH key to clipboard
-	```
-	- then, paste to Gitlab <https://gitlab.com/profile/keys>
-	- You can commit to GitLab now (pwd = s)
+  - Generate SSH Key \**remember to change your info*
+
+  ```
+  ssh-keygen -t rsa -C "your@email.com" # pwd = s
+  cat ~/.ssh/id_rsa.pub # Show SSH key
+  pbcopy < ~/.ssh/id_rsa.pub # Copy SSH key to clipboard
+  ```
+
+  - then, paste to Gitlab <https://gitlab.com/profile/keys>
+  - You can commit to GitLab now (pwd = s)
+1. clone this repo to `~/dev/dotfiles` \#todo
+
+  ```
+  cd ~ && mkdir dev && cd dev
+  git clone https://github.com/Edditoria/dotfiles.git
+  cd dotfiles && git remote -v
+  ```
+
 1. Initial install Dotfiles
-```
-cd ~/dev/dotfiles && source install.sh
-cd ~
-```
+
+  ```
+  cd ~/dev/dotfiles && source install.sh
+  cd ~
+  ```
 
 ## Install Homebrew and Brew Things
 
-- install Homebrew
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor # may need to fix some problems
-brew update
-```
-- install homebrew formulae and cask apps
-```
-cd ~/dev/dotfiles && source install_homebrew.sh
-cd ~
-```
-- config Atom: in Atom main menu, "Install Shell Commands"
-- config Github Desktop
+1. install Homebrew
+
+  ```
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew doctor # may need to fix some problems
+  brew update
+  ```
+
+1. install homebrew formulae and cask apps
+
+  ```
+  cd ~/dev/dotfiles && source install_homebrew.sh
+  cd ~
+  ```
+
+1. check your brew leaves and cake apps
+
+  ```
+  brew leaves
+  brew cask list
+  ```
+
+1. config Atom: in Atom main menu, "Install Shell Commands"
+1. config Github Desktop
 
 ## Other Things
 
@@ -91,5 +114,5 @@ in Terminal
 
 - merge my Evernote: Setup Dev Env 2014
 - build checking system:
-	- check dotfile directory
-	- compare installed things, and monitor them
+  - check dotfile directory
+  - compare installed things, and monitor them

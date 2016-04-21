@@ -1,1 +1,1 @@
-cakebrew github-desktop
+caffeine cakebrew github-desktop
