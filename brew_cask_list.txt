@@ -1,1 +1,1 @@
-caffeine cakebrew github-desktop
+cakebrew github-desktop spectacle

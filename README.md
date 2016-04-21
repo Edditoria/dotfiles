@@ -14,10 +14,15 @@
 
 Before you push dotfiles to Github
 
+1. update brew_leaves.txt, cask_list.txt and app_list.txt
+
 ```
 cd ~/dev/dotfiles
-source backup_brew.sh # store a brew_leaves.txt
+source backup_brew.sh
 ```
+
+- update Accessibility in Security & Privacy
+- update Login Items in Users & Groups
 
 ---
 
@@ -89,7 +94,6 @@ source backup_brew.sh # store a brew_leaves.txt
 
   ```
   cd ~/dev/dotfiles && source install_homebrew.sh
-  cd ~
   ```
 
 1. check your brew leaves and cake apps
@@ -102,6 +106,23 @@ source backup_brew.sh # store a brew_leaves.txt
 1. config Atom: in Atom main menu, "Install Shell Commands"
 1. config Github Desktop
 
+## install npm using nvm
+
+  ```
+  cd ~ && source .bash_profile
+  nvm --version # check
+  nvm install stable
+  ```
+
+Do some checking
+
+  ```
+  nvm ls # check
+  nvm alias default node # just update to use the latest build
+  node -v # check
+  node ~/dev/dotfiles/test/test_node.js # open browser to see Hello World
+  ```
+
 ## Other Things
 
 in Terminal
@@ -109,6 +130,8 @@ in Terminal
 - copy Novel and create a profile "customized"
 - text settings: DejaVu Sans Mono 14 pt. "book", line spacing "1.03"
 - window size: 90 x 24
+
+- check Accessibility in Security & Privacy
 
 # \#todo
 
