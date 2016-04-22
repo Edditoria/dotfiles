@@ -139,3 +139,4 @@ in Terminal
 - build checking system:
   - check dotfile directory
   - compare installed things, and monitor them
+- backup npm and meteorjs
