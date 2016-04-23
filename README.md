@@ -125,12 +125,8 @@ Do some checking
 
 ## Other Things
 
-in Terminal
-
-- copy Novel and create a profile "customized"
-- text settings: DejaVu Sans Mono 14 pt. "book", line spacing "1.03"
-- window size: 90 x 24
-
+- add **Novel_customized** theme to Terminal
+  - then set as default and re-open Terminal
 - check Accessibility in Security & Privacy
 
 # \#todo
