@@ -2,16 +2,14 @@
 
 # get current dir
 DOTFILES_DIR="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
+BACKUP_DIR="$DOTFILES_DIR/backup"
 
 
 # install brew formula
-brew install $(cat "$DOTFILES_DIR/backup/brew_leaves.txt")
+brew install $(cat "$BACKUP_DIR/brew_leaves.txt")
 
 # add Cask repo to Homebrew
 brew tap caskroom/cask
 
-# build symlink for every cask app install
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 # install cask apps
-brew cask install $(cat "$DOTFILES_DIR/backup/brew_cask_list.txt")
+brew cask install $(cat "$BACKUP_DIR/brew_cask_list.txt")

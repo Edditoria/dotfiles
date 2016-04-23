@@ -1,5 +1,6 @@
 mv (file/folder)
 cat [file]
+which (rather than whereis)
 
 git add -A # includes deletions
 git log / git log --summary
