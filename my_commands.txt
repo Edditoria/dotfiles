@@ -18,20 +18,12 @@ git commit --amend -m "test" # add message to previous commit
 git rebase <master> # <feature> becomes base on <master>
 git push <remote> <branch> -f # remember to do it
 
+# if Vi comes out in Git
+#   hit `i`, add commit message at 1st line, then hit `esc`
+#   hit `:` `w` `q` `return`
+
 # npm
 npm ls -g --depth=0
 
 # maintain
-sudo softwareupdate -i -a
-brew -v update
-brew upgrade --all
-brew cleanup
-brew cask update
-brew cask cleanup
-brew prune
-brew doctor
-npm install npm -g
-npm update -g
-sudo gem update --system
-sudo gem update --no-document
-# (--no-doc and --no-ri is deprecated)
+cat ~/dev/dotfiles/update.sh

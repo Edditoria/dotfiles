@@ -5,7 +5,7 @@ DOTFILES_DIR="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$DOTFILES_DIR/backup"
 
 # update Homebrew and formulae
-brew update
+brew -v update
 brew upgrade --all
 
 # install brew formulae
