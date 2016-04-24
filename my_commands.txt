@@ -23,10 +23,15 @@ npm ls -g --depth=0
 
 # maintain
 sudo softwareupdate -i -a
-brew update
+brew -v update
 brew upgrade --all
 brew cleanup
+brew cask update
+brew cask cleanup
+brew prune
+brew doctor
 npm install npm -g
 npm update -g
 sudo gem update --system
-sudo gem update'
+sudo gem update --no-document
+# (--no-doc and --no-ri is deprecated)
