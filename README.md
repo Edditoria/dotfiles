@@ -5,6 +5,7 @@
 \[\!\] Note:
 - My current OS: OSX 10.10.5
 - dotfiles dir: ~/dev/dotfiles
+- I keep my Cask app in default directory, i.e. `~\Applications\`
 
 # Useful Command
 
@@ -18,7 +19,7 @@ Before you push dotfiles to Github
 
 ```
 cd ~/dev/dotfiles
-source backup_brew.sh
+source backup.sh
 ```
 
 - update Accessibility in Security & Privacy
@@ -104,9 +105,11 @@ source backup_brew.sh
   ```
 
 1. config Atom: in Atom main menu, "Install Shell Commands"
-1. config Github Desktop
+1. config Cask apps, especially Github Desktop, Evernote
 
-## install npm using nvm
+## Javascript Dev Env
+
+1. install npm using nvm
 
   ```
   cd ~ && source .bash_profile
@@ -114,13 +117,25 @@ source backup_brew.sh
   nvm install stable
   ```
 
-Do some checking
+1. do some checking
 
   ```
   nvm ls # check
   nvm alias default node # just update to use the latest build
   node -v # check
   node ~/dev/dotfiles/test/test_node.js # open browser to see Hello World
+  ```
+
+1. install npm packages
+
+  ```
+  npm install -g coffee-script
+  ```
+
+1. install Meteor.js
+
+  ```
+  curl https://install.meteor.com/ | sh
   ```
 
 ## Other Things

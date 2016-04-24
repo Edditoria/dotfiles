@@ -1,1 +1,1 @@
-android-file-transfer atom cakebrew coconutbattery enjoyable evernote github-desktop itsycal spectacle spotify steam vlc
+android-file-transfer atom cakebrew coconutbattery enjoyable evernote github-desktop helium imageoptim isyncr-desktop itsycal spectacle spotify steam vlc xtrafinder

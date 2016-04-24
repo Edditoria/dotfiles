@@ -1,5 +1,4 @@
-mv (file/folder)
-cat [file]
+mv (file/folder)  cat [file]  pwd
 which (rather than whereis)
 
 git add -A # includes deletions
@@ -18,3 +17,16 @@ git commit --amend # add changes to previous commit
 git commit --amend -m "test" # add message to previous commit
 git rebase <master> # <feature> becomes base on <master>
 git push <remote> <branch> -f # remember to do it
+
+# npm
+npm ls -g --depth=0
+
+# maintain
+sudo softwareupdate -i -a
+brew update
+brew upgrade --all
+brew cleanup
+npm install npm -g
+npm update -g
+sudo gem update --system
+sudo gem update'
