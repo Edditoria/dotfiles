@@ -19,11 +19,13 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 - dotfiles dir: `~/dev/dotfiles` *(and not `.dotfiles`)*
 - I keep my Cask app symlinks in Cask's suggested directory.
   - i.e. `~/Applications/` not `/Applications/`
+- I keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
 
 # Useful Command
 
 - `tt` to print my stupid note for some Terminal commands.
 - `source update.sh` to update brew, cask apps and gems.
+  - \#todo: Since I use nvm to manage npm, you have to manually migrate npm packages from a previous version, e.g. `nvm install v0.12.7 --reinstall-packages-from=0.12.6`
 - `source backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt
 
 
@@ -79,7 +81,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. initial install Dotfiles:
 
   ```
-  cd ~/dev/dotfiles && source install_bashrc_profile.sh && cd ~
+  cd ~/dev/dotfiles && source install_home_dotfiles.sh && cd ~
   ```
 
 ## Install Homebrew and Brew Things
