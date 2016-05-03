@@ -157,3 +157,4 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   - backup npm and meteorjs
   - update Accessibility in Security & Privacy
   - update Login Items in Users & Groups
+- missing PushBullet.app?

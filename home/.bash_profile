@@ -1,6 +1,11 @@
-alias ..='cd .. && ls'
+alias gd='cd ~/dev'
 alias tt='cat ~/dev/dotfiles/my_commands.txt'
-alias ls='ls -Gh'
+
+alias aa='alias'
+alias gs='git status'
+alias ls='ls -Gha'
+alias ll='ls -l'
+alias ..='cd .. && ls'
 
 # colorize Terminal for Novel theme
 export CLICOLOR=1
