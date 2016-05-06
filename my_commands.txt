@@ -1,29 +1,9 @@
 mv (file/folder)  cat [file]  pwd
 which (rather than whereis)
 
-git add -A # includes deletions
-git log / git log --summary
-git remote add origin [url]
-git push -u origin master # -u: remember master > origin
-
-git checkout -- <filename> # unmodifying a modified file
-git reset HEAD <filename> # unstage (undo) the change [!] read doc about --soft and --hard
-git stash # save current branch but not commit it [!]
-git stash apply
-
-# touch the previous commit
-# [!] dangerous for public commit. read doc first
-git commit --amend # add changes to previous commit
-git commit --amend -m "test" # add message to previous commit
-git rebase <master> # <feature> becomes base on <master>
-git push <remote> <branch> -f # remember to do it
-
-# if Vi comes out in Git
-#   hit `i`, add commit message at 1st line, then hit `esc`
-#   hit `:` `w` `q` `return`
-
 # npm
-npm ls -g --depth=0
+npm ls -g --depth=0 (or use alias 'npmls')
+npm install -g [something]
 
 # maintain
 cat ~/dev/dotfiles/update.sh
