@@ -9,6 +9,7 @@ alias ..='cd .. && ls'
 
 alias gs='git status'
 alias npmls='npm ls -g --depth=0'
+alias ip='ipconfig getifaddr en0'
 
 
 # colorize Terminal for Novel theme
