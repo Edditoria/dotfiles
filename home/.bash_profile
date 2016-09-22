@@ -1,6 +1,6 @@
 alias gd='cd ~/dev'
-alias tt='cat ~/dev/dotfiles/my_commands.txt'
-alias gg='cat ~/dev/dotfiles/my_commands_git.txt'
+alias tt='cat ~/dev/dotfiles/notes/tt.txt'
+alias gg='cat ~/dev/dotfiles/notes/gg.txt'
 
 alias aa='alias'
 alias ls='ls -Gha'

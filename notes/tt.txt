@@ -1,4 +1,6 @@
-mv (file/folder)  cat [file]  pwd
+mv (file/folder)
+cat [file]
+pwd
 which (rather than whereis)
 
 # npm
@@ -7,3 +9,7 @@ npm install -g [something]
 
 # maintain
 cat ~/dev/dotfiles/update.sh
+
+# others
+aa to read alias
+tt to read git notes

@@ -8,6 +8,12 @@ BACKUP_DIR="$DOTFILES_DIR/backup"
 
 # this should be exeute in dotfiles folder
 
+echo $( npm ls -g --depth=0 --json ) > "$BACKUP_DIR/npm_ls_g.json"
+echo "# Test: read npm global packages file"
+echo $HLINE
+cat "$BACKUP_DIR/npm_ls_g.json"
+echo " "
+
 echo $( brew leaves ) > "$BACKUP_DIR/brew_leaves.txt"
 echo "# Test: read Brew Leaves txt file"
 echo $HLINE
