@@ -20,13 +20,13 @@ echo $HLINE
 cat "$BACKUP_DIR/brew_leaves.txt"
 echo " "
 
-echo $( brew cask list) > "$BACKUP_DIR/brew_cask_list.txt"
+echo $( brew cask list ) > "$BACKUP_DIR/brew_cask_list.txt"
 echo "# Test: read Cask apps txt file"
 echo $HLINE
 cat "$BACKUP_DIR/brew_cask_list.txt"
 echo " "
 
-echo $( ls /Applications ) > "$BACKUP_DIR/app_list.txt"
+ls /Applications > "$BACKUP_DIR/app_list.txt"
 echo "# Test: read all apps list txt file"
 echo $HLINE
 cat "$BACKUP_DIR/app_list.txt"

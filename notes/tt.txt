@@ -12,4 +12,4 @@ cat ~/dev/dotfiles/update.sh
 
 # others
 aa to read alias
-tt to read git notes
+gg to read git notes

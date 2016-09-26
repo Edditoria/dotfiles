@@ -11,6 +11,7 @@ alias gs='git status'
 alias npmls='npm ls -g --depth=0'
 alias ip='ipconfig getifaddr en0'
 
+export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 
 # colorize Terminal for Novel theme
 export CLICOLOR=1

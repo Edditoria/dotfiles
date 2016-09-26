@@ -9,16 +9,15 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 > Caution:
 > - This repo is in dirty scratch status. There must be something wrong and a lot of bugs.
-> - I only update piece by piece, and the scripts are un-tested yet.
-> - The scripts may screw up your system environment. Do it at your own risk\~\~
+> - I only update piece by piece, and some scripts are not tested yet.
+> - The scripts may screw up your system environment. Use them at your own risk\~\~
 > - Please raise out issue and/or give me a ~~hi five~~ pull request.
 
 # My Setup
 
 - Current OS: OSX 10.10.5
 - dotfiles dir: `~/dev/dotfiles` *(and not `.dotfiles`)*
-- I keep my Cask app symlinks in Cask's suggested directory.
-  - i.e. `~/Applications/` not `/Applications/`
+- I keep my Cask app in customized directory `/Applications/Cask` (option is saved in `.bash_profile`)
 - I keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
 
 # Useful Command
@@ -145,6 +144,12 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 - add **Novel_customized** theme to Terminal
   - then set as default and re-open Terminal
+- manually install apps that are not in caskroom nor Apple AppStore:
+  - PushBullet.app (fade out by official)
+  - Tagr.app (free version fade out by official)
+  - Tune Instructor.app v3.5 (v3.6 requires OSX El Capitan)
+  - Chrome, Dropbox, Google Drive \#todo
+- manually config notification center
 - check Accessibility in Security & Privacy
 
 # \#todo
@@ -157,4 +162,3 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   - backup npm and meteorjs
   - update Accessibility in Security & Privacy
   - update Login Items in Users & Groups
-- missing PushBullet.app?
