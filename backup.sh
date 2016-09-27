@@ -8,7 +8,7 @@ BACKUP_DIR="$DOTFILES_DIR/backup"
 
 # this should be exeute in dotfiles folder
 
-echo $( npm ls -g --depth=0 --json ) > "$BACKUP_DIR/npm_ls_g.json"
+npm ls -g --depth=0 --json > "$BACKUP_DIR/npm_ls_g.json"
 echo "# Test: read npm global packages file"
 echo $HLINE
 cat "$BACKUP_DIR/npm_ls_g.json"
@@ -30,4 +30,10 @@ ls /Applications > "$BACKUP_DIR/app_list.txt"
 echo "# Test: read all apps list txt file"
 echo $HLINE
 cat "$BACKUP_DIR/app_list.txt"
+echo " "
+
+osascript -e 'tell application "System Events" to get the name of every login item' > "$BACKUP_DIR/login_items.txt"
+echo "# Test: read login items txt file"
+echo $HLINE
+cat "$BACKUP_DIR/login_items.txt"
 echo " "

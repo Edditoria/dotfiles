@@ -2,6 +2,7 @@ mv (file/folder)
 cat [file]
 pwd
 which (rather than whereis)
+pdpaste
 
 # npm
 npm ls -g --depth=0 (or use alias 'npmls')

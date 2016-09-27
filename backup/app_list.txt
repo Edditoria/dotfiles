@@ -5,6 +5,7 @@
 Affinity Designer.app
 Affinity Photo.app
 Airmail 2.app
+Alt-C.app
 Amphetamine.app
 Aperture.app
 App Store.app

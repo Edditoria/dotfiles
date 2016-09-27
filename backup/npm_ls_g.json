@@ -1,1 +1,27 @@
-{ "dependencies": { "coffee-script": { "version": "1.10.0", "from": "coffee-script@latest", "resolved": "https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz" }, "hexo-cli": { "version": "1.0.2", "from": "hexo-cli@latest", "resolved": "https://registry.npmjs.org/hexo-cli/-/hexo-cli-1.0.2.tgz" }, "npm": { "version": "3.8.3" }, "pug": { "version": "2.0.0-alpha6", "from": "pug@latest", "resolved": "https://registry.npmjs.org/pug/-/pug-2.0.0-alpha6.tgz" }, "sass-lint": { "version": "1.7.0", "from": "sass-lint@latest", "resolved": "https://registry.npmjs.org/sass-lint/-/sass-lint-1.7.0.tgz" } } }
+{
+  "dependencies": {
+    "coffee-script": {
+      "version": "1.10.0",
+      "from": "coffee-script@latest",
+      "resolved": "https://registry.npmjs.org/coffee-script/-/coffee-script-1.10.0.tgz"
+    },
+    "hexo-cli": {
+      "version": "1.0.2",
+      "from": "hexo-cli@latest",
+      "resolved": "https://registry.npmjs.org/hexo-cli/-/hexo-cli-1.0.2.tgz"
+    },
+    "npm": {
+      "version": "3.8.3"
+    },
+    "pug": {
+      "version": "2.0.0-alpha6",
+      "from": "pug@latest",
+      "resolved": "https://registry.npmjs.org/pug/-/pug-2.0.0-alpha6.tgz"
+    },
+    "sass-lint": {
+      "version": "1.7.0",
+      "from": "sass-lint@latest",
+      "resolved": "https://registry.npmjs.org/sass-lint/-/sass-lint-1.7.0.tgz"
+    }
+  }
+}
