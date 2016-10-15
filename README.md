@@ -23,9 +23,10 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 # Useful Command
 
 - `tt` to print my stupid note for some Terminal commands.
-- `source update.sh` to update brew, cask apps and gems.
-  - \#todo: Since I use nvm to manage npm, you have to manually migrate npm packages from a previous version, e.g. `nvm install v0.12.7 --reinstall-packages-from=0.12.6`
-- `source backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt
+- `. update_appstore.sh` to update Mac apps from AppStore.
+- `. update_brew.sh` to update brew and cask apps.
+- `. update_npm.sh` to update npm and packages (stable and lts)
+- `. backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt, etc.
 
 
 ---
@@ -116,6 +117,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   ```
   cd ~ && source .bash_profile
   nvm --version # check
+  nvm install --lts
   nvm install stable
   ```
 
@@ -123,7 +125,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
   ```
   nvm ls # check
-  nvm alias default node # just update to use the latest build
+  nvm alias default stable # just update to use the latest build
   node -v # check
   node ~/dev/dotfiles/test/test_node.js # open browser to see Hello World
   ```
@@ -158,6 +160,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 - build checking system:
   - check dotfile directory
   - compare installed things, and monitor them
+  - compare updated packages in npm, brew and etc. (using private log)
 - a Maintenance session to includes:
   - backup npm and meteorjs
   - update Accessibility in Security & Privacy

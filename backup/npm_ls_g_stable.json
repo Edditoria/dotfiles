@@ -1,0 +1,57 @@
+{
+  "dependencies": {
+    "coffee-script": {
+      "version": "1.11.1",
+      "from": "coffee-script@1.11.1",
+      "resolved": "https://registry.npmjs.org/coffee-script/-/coffee-script-1.11.1.tgz"
+    },
+    "coffeelint": {
+      "version": "1.16.0",
+      "from": "coffeelint@latest",
+      "resolved": "https://registry.npmjs.org/coffeelint/-/coffeelint-1.16.0.tgz"
+    },
+    "hexo-cli": {
+      "version": "1.0.2",
+      "from": "hexo-cli@1.0.2",
+      "resolved": "https://registry.npmjs.org/hexo-cli/-/hexo-cli-1.0.2.tgz"
+    },
+    "jshint": {
+      "version": "2.9.3",
+      "from": "jshint@2.9.3",
+      "resolved": "https://registry.npmjs.org/jshint/-/jshint-2.9.3.tgz"
+    },
+    "marked": {
+      "version": "0.3.6",
+      "from": "marked@0.3.6",
+      "resolved": "https://registry.npmjs.org/marked/-/marked-0.3.6.tgz"
+    },
+    "npm": {
+      "version": "3.10.8"
+    },
+    "pug": {
+      "version": "2.0.0-beta6",
+      "from": "pug@2.0.0-beta6",
+      "resolved": "https://registry.npmjs.org/pug/-/pug-2.0.0-beta6.tgz"
+    },
+    "pug-lint": {
+      "version": "2.3.0",
+      "from": "pug-lint@2.3.0",
+      "resolved": "https://registry.npmjs.org/pug-lint/-/pug-lint-2.3.0.tgz"
+    },
+    "sass-lint": {
+      "version": "1.9.1",
+      "from": "sass-lint@1.9.1",
+      "resolved": "https://registry.npmjs.org/sass-lint/-/sass-lint-1.9.1.tgz"
+    },
+    "stylelint": {
+      "version": "7.4.2",
+      "from": "stylelint@7.4.2",
+      "resolved": "https://registry.npmjs.org/stylelint/-/stylelint-7.4.2.tgz"
+    },
+    "stylint": {
+      "version": "1.5.7",
+      "from": "stylint@1.5.7",
+      "resolved": "https://registry.npmjs.org/stylint/-/stylint-1.5.7.tgz"
+    }
+  }
+}
