@@ -21,4 +21,6 @@ export PS1="\n\[$(tput setaf 6)\]\u\[$(tput sgr0)\]@\[$(tput setaf 6)\]\h\[$(tpu
 
 # npm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if [[ -s $(brew --prefix nvm)/nvm.sh ]]; then
+  source $(brew --prefix nvm)/nvm.sh
+fi

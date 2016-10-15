@@ -8,10 +8,18 @@ BACKUP_DIR="$DOTFILES_DIR/backup"
 
 # this should be exeute in dotfiles folder
 
-npm ls -g --depth=0 --json > "$BACKUP_DIR/npm_ls_g.json"
-echo "# Test: read npm global packages file"
+nvm use lts/argon
+npm ls -g --depth=0 --json > "$BACKUP_DIR/npm_ls_g_lts_argon.json"
+echo "# Test: read npm global packages file (lts-argon)"
 echo $HLINE
-cat "$BACKUP_DIR/npm_ls_g.json"
+cat "$BACKUP_DIR/npm_ls_g_lts_argon.json"
+echo " "
+
+nvm use stable
+npm ls -g --depth=0 --json > "$BACKUP_DIR/npm_ls_g_stable.json"
+echo "# Test: read npm global packages file (stable)"
+echo $HLINE
+cat "$BACKUP_DIR/npm_ls_g_stable.json"
 echo " "
 
 echo $( brew leaves ) > "$BACKUP_DIR/brew_leaves.txt"
