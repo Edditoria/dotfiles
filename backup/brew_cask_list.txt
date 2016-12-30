@@ -1,1 +1,1 @@
-android-file-transfer appcleaner atom cakebrew cheatsheet coconutbattery enjoyable evernote font-dejavu-sans font-noto-sans-cjk github-desktop helium imageoptim isyncr-desktop itsycal lastpass sourcetree spectacle spotify steam sublime-text tagger vlc xtrafinder
+android-file-transfer appcleaner atom cakebrew cheatsheet coconutbattery enjoyable evernote font-dejavu-sans font-noto-sans-cjk github-desktop helium imageoptim isyncr-desktop itsycal lastpass origami-studio sourcetree spectacle spotify steam sublime-text tagger vlc xquartz xtrafinder

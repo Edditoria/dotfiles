@@ -7,6 +7,7 @@ pdpaste
 # npm
 npm ls -g --depth=0 (or use alias 'npmls')
 npm install -g [something]
+nvm install lts/boron --reinstall-packages-from=boron
 
 # maintain
 cat ~/dev/dotfiles/update.sh

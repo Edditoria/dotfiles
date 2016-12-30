@@ -18,6 +18,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 - Current OS: OSX 10.10.5
 - dotfiles dir: `~/dev/dotfiles` *(and not `.dotfiles`)*
 - I keep my Cask app in customized directory `/Applications/Cask` (option is saved in `.bash_profile`)
+- My `nvm alias default` is `boron` (neither `stable` nor `lts/boron`)
 - I keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
 
 # Useful Command
@@ -25,8 +26,9 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 - `tt` to print my stupid note for some Terminal commands.
 - `. update_appstore.sh` to update Mac apps from AppStore.
 - `. update_brew.sh` to update brew and cask apps.
-- `. update_npm.sh` to update npm and packages (stable and lts)
+- `. update_npm.sh` to update npm and packages (stable, lts/argon and lts/boron)
 - `. backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt, etc.
+- `npm check -gu` for each npm version to interactively upgrade npm packages.
 
 
 ---
@@ -117,15 +119,13 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   ```
   cd ~ && source .bash_profile
   nvm --version # check
-  nvm install --lts
-  nvm install stable
+  cd ~/dev/dotfiles && source install_npm.sh
   ```
 
 1. do some checking:
 
   ```
   nvm ls # check
-  nvm alias default stable # just update to use the latest build
   node -v # check
   node ~/dev/dotfiles/test/test_node.js # open browser to see Hello World
   ```

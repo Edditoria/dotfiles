@@ -45,11 +45,10 @@ LINE.app
 Launchpad.app
 Mail.app
 Maps.app
-Memory Monitor.app
+Memory Cleaner.app
 Messages.app
 Mission Control.app
 MonthlyCal.app
-Noise Reducer Pro.app
 Notes.app
 Numbers.app
 Pages.app
@@ -65,6 +64,7 @@ Pushbullet.app
 QuickTime Player.app
 ReadKit.app
 Reminders.app
+RulerSwift.app
 Safari.app
 ScreenShot PSD.app
 Shazam.app

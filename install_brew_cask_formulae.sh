@@ -6,7 +6,7 @@ BACKUP_DIR="$DOTFILES_DIR/backup"
 
 # update Homebrew and formulae
 brew -v update
-brew upgrade --all
+brew upgrade # --all is default in latest brew
 
 # install brew formulae
 brew install $(cat "$BACKUP_DIR/brew_leaves.txt")

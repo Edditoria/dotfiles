@@ -2,7 +2,7 @@
   "dependencies": {
     "bower": {
       "version": "1.8.0",
-      "from": "bower@1.8.0",
+      "from": "bower@latest",
       "resolved": "https://registry.npmjs.org/bower/-/bower-1.8.0.tgz"
     },
     "coffee-script": {
@@ -17,7 +17,7 @@
     },
     "hexo-cli": {
       "version": "1.0.2",
-      "from": "hexo-cli@1.0.2",
+      "from": "hexo-cli@latest",
       "resolved": "https://registry.npmjs.org/hexo-cli/-/hexo-cli-1.0.2.tgz"
     },
     "jshint": {
@@ -27,7 +27,7 @@
     },
     "marked": {
       "version": "0.3.6",
-      "from": "marked@0.3.6",
+      "from": "marked@latest",
       "resolved": "https://registry.npmjs.org/marked/-/marked-0.3.6.tgz"
     },
     "npm": {
@@ -37,17 +37,17 @@
     },
     "npm-check": {
       "version": "5.4.0",
-      "from": "npm-check@5.4.0",
+      "from": "npm-check@latest",
       "resolved": "https://registry.npmjs.org/npm-check/-/npm-check-5.4.0.tgz"
     },
     "pug": {
       "version": "2.0.0-beta6",
-      "from": "pug@2.0.0-beta6",
+      "from": "pug@latest",
       "resolved": "https://registry.npmjs.org/pug/-/pug-2.0.0-beta6.tgz"
     },
     "pug-lint": {
       "version": "2.3.0",
-      "from": "pug-lint@2.3.0",
+      "from": "pug-lint@latest",
       "resolved": "https://registry.npmjs.org/pug-lint/-/pug-lint-2.3.0.tgz"
     },
     "sass-lint": {
