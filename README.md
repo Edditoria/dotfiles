@@ -16,7 +16,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 # My Setup
 
 - Current OS: OSX 10.10.5
-- dotfiles dir: `~/dev/dotfiles` *(and not `.dotfiles`)*
+- dotfiles dir: `~/dev/dotfiles` *(not `.dotfiles`)*
 - I keep my Cask app in customized directory `/Applications/Cask` (option is saved in `.bash_profile`)
 - My `nvm alias default` is `boron` (neither `stable` nor `lts/boron`)
 - I keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
@@ -35,7 +35,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 # Install for New Machine
 
-## Prepare Before Dotfile
+## Prepare Before Dotfiles
 
 1. Install XQuartz <http://xquartz.macosforge.org/landing/>
 1. Install Xcode from MacStore <https://itunes.apple.com/hk/app/xcode/id497799835>
@@ -72,11 +72,12 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
   - then, paste to Gitlab. <https://gitlab.com/profile/keys>
   - You can commit to GitLab now. (pwd = s)
-1. clone this repo to `~/dev/dotfiles`.
+1. press the nice **Fork** button in this [repo](https://github.com/Edditoria/dotfiles)
+1. clone to your local machine in `~/dev/dotfiles`.
 
   ```
   mkdir ~/dev && cd ~/dev
-  git clone https://github.com/Edditoria/dotfiles.git dotfiles
+  git clone https://github.com/{your.username}/dotfiles.git dotfiles
   cd dotfiles && git remote -v
   ```
 
@@ -158,7 +159,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 - merge my Evernote: Setup Dev Env 2014
 - build checking system:
-  - check dotfile directory
+  - check dotfiles directory
   - compare installed things, and monitor them
   - compare updated packages in npm, brew and etc. (using private log)
 - a Maintenance session to includes:

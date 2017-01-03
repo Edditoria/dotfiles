@@ -6,7 +6,7 @@ HLINE="-------"
 DOTFILES_DIR="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$DOTFILES_DIR/backup"
 
-# this should be exeute in dotfiles folder
+# this should be exeute in dotfiles directory
 
 nvm use argon
 npm ls -g --depth=0 --json > "$BACKUP_DIR/npm_ls_g_lts_argon.json"

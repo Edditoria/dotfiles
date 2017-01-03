@@ -1,4 +1,4 @@
-mv (file/folder)
+mv (file/directory)
 cat [file]
 pwd
 which (rather than whereis)
