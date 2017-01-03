@@ -40,48 +40,45 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. Install XQuartz <http://xquartz.macosforge.org/landing/>
 1. Install Xcode from MacStore <https://itunes.apple.com/hk/app/xcode/id497799835>
 1. ~~Install Xcode Command Line Tools in Xcode app.~~
-1. check if Xcode is installed:
+1. Check if Xcode is installed:
 
   ```
   xcode-select -p # expect return: /Applications/Xcode.app/Contents/Developer
   ```
 
-1. check if Xcode Command Line Tool is installed: (It should be pre-installed by Xcode)
+1. Check if Xcode Command Line Tool is installed: (It should be pre-installed by Xcode)
 
   ```
   gcc --version
   ```
 
-1. config Git: \**remember to change your info*
+1. Check if git and `osxkeychain helper` are already installed:
 
   ```
-  cd ~
-  git config --global user.name "Your Name"
-  git config --global user.email "your@email.com"
-  git config --list
+  git credential-osxkeychain # expect return: "usage:..."
   ```
 
-1. config GitLab: \#todo use HTTPS instead of SSH
-  - Generate SSH Key: \**remember to change your info*
-
-  ```
-  ssh-keygen -t rsa -C "your@email.com" # pwd = s
-  cat ~/.ssh/id_rsa.pub # Show SSH key
-  pbcopy < ~/.ssh/id_rsa.pub # Copy SSH key to clipboard
-  ```
-
-  - then, paste to Gitlab. <https://gitlab.com/profile/keys>
-  - You can commit to GitLab now. (pwd = s)
-1. press the nice **Fork** button in this [repo](https://github.com/Edditoria/dotfiles)
-1. clone to your local machine in `~/dev/dotfiles`.
+1. Press the nice **Fork** button in [this repo](https://github.com/Edditoria/dotfiles)
+1. Clone to your local machine in `~/dev/dotfiles`.
 
   ```
   mkdir ~/dev && cd ~/dev
-  git clone https://github.com/{your.username}/dotfiles.git dotfiles
+  git clone https://github.com/{your.username}/dotfiles.git
   cd dotfiles && git remote -v
   ```
 
-1. initial install Dotfiles:
+1. Initial config Git and GitLab:
+
+  ```
+  source init_git.sh
+  ```
+
+  > note:
+  > If something wrong when you add a SSH key to GitLab, here is the information you need:
+  > - Copy SSH key to clipboard: `pbcopy < ~/.ssh/id_rsa.pub`
+  > - Paste the key to this URL: <https://gitlab.com/profile/keys>
+
+1. Initial install Dotfiles:
 
   ```
   cd ~/dev/dotfiles && source install_home_dotfiles.sh && cd ~
