@@ -1,1 +1,1 @@
-android-platform-tools vitorgalvao/tiny-scripts/cask-repair git-lfs heroku imagemagick nvm
+android-platform-tools git git-lfs heroku imagemagick nvm rbenv rbenv-binstubs sqlite

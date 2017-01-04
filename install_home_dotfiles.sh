@@ -8,3 +8,5 @@ DOTFILES_DIR="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
 ln -s "$DOTFILES_DIR/home/.bash_profile" ~
 ln -s "$DOTFILES_DIR/home/.bashrc" ~
 ln -s "$DOTFILES_DIR/home/.gemrc" ~
+mkdir -p ~/.bundle
+ln -s "$DOTFILES_DIR/home/.bundle/config" ~/.bundle/

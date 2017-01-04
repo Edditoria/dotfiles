@@ -19,6 +19,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 - dotfiles dir: `~/dev/dotfiles` *(not `.dotfiles`)*
 - I keep my Cask app in customized directory `/Applications/Cask` (option is saved in `.bash_profile`)
 - My `nvm alias default` is `boron` (neither `stable` nor `lts/boron`)
+- I use `nvm` to manage `npm`; and `rbenv` & `bundler` to manage `ruby` & projects
 - I keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
 
 # Useful Command
@@ -73,7 +74,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   source init_git.sh
   ```
 
-  > note:
+  > *note:*
   > If something wrong when you add a SSH key to GitLab, here is the information you need:
   > - Copy SSH key to clipboard: `pbcopy < ~/.ssh/id_rsa.pub`
   > - Paste the key to this URL: <https://gitlab.com/profile/keys>
@@ -139,6 +140,31 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   ```
   curl https://install.meteor.com/ | sh
   ```
+
+## Ruby Dev Env
+
+1. check current Ruby environment:
+
+  ```
+  exec $SHELL -l # restart shell as a login shell
+  rbenv -v
+  which ruby-build # /Users/Edditoria/.rbenv/shims/gem
+  ```
+
+1. install rbenv and Ruby:
+
+  ```
+  cd ~/dev/dotfiles && source install_rbenv.sh
+  rails -v # better to check manually
+  ```
+
+> *note:*
+> In my experience, Rails installation failed **every single time**.
+> Different error may occur in the different version of rails in different MacOS.
+> Sorry that you may need to investigate the error by yourself.
+
+> *extra note:*
+> You still need to `be {command}` (alias of `bundle exec`) and `rbenv rehash`
 
 ## Other Things
 
