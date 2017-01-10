@@ -1,0 +1,56 @@
+"*":
+  "atom-minimap-titles":
+    font: "banner"
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "metrics"
+      "linter-scss-lint"
+      "autocomplete-atom-api"
+      "exception-reporting"
+      "coffee-compile"
+      "meteor-api"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    fontFamily: "'DejaVu Sans Mono'"
+    fontSize: 16
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  linter:
+    showErrorPanel: false
+  "linter-jshint": {}
+  "linter-stylelint":
+    disableWhenNoConfig: false
+    useStandard: true
+  "markdown-preview":
+    breakOnSingleNewline: true
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+  pigments:
+    markerType: "dot"
+  "preview-plus":
+    livePreview: true
+  "source-preview": {}
+  "terminal-plus":
+    style:
+      fontSize: "14"
+      theme: "novel"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+".css.source.stylus":
+  editor:
+    autoIndentOnPaste: false
