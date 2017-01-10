@@ -40,16 +40,11 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 1. Install XQuartz <http://xquartz.macosforge.org/landing/>
 1. Install Xcode from MacStore <https://itunes.apple.com/hk/app/xcode/id497799835>
-1. ~~Install Xcode Command Line Tools in Xcode app.~~
-1. Check if Xcode is installed:
+1. Install Xcode Command Line Tools in Xcode.app's preference.
+1. Check if Xcode and Xcode CLT is installed:
 
   ```
   xcode-select -p # expect return: /Applications/Xcode.app/Contents/Developer
-  ```
-
-1. Check if Xcode Command Line Tool is installed: (It should be pre-installed by Xcode)
-
-  ```
   gcc --version
   ```
 
@@ -82,7 +77,8 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. Initial install Dotfiles:
 
   ```
-  cd ~/dev/dotfiles && source install_home_dotfiles.sh && cd ~
+  cd ~/dev/dotfiles && source install_home_dotfiles.sh
+  cd ~ && source ~/.bash_profile
   ```
 
 ## Install Homebrew and Brew Things

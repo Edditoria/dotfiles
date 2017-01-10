@@ -2,7 +2,7 @@
   "dependencies": {
     "bower": {
       "version": "1.8.0",
-      "from": "bower@latest",
+      "from": "bower@1.8.0",
       "resolved": "https://registry.npmjs.org/bower/-/bower-1.8.0.tgz"
     },
     "coffee-script": {
@@ -31,9 +31,7 @@
       "resolved": "https://registry.npmjs.org/marked/-/marked-0.3.6.tgz"
     },
     "npm": {
-      "version": "4.0.5",
-      "from": "npm@latest",
-      "resolved": "https://registry.npmjs.org/npm/-/npm-4.0.5.tgz"
+      "version": "2.15.11"
     },
     "npm-check": {
       "version": "5.4.0",
@@ -42,7 +40,7 @@
     },
     "pug": {
       "version": "2.0.0-beta6",
-      "from": "pug@latest",
+      "from": "pug@2.0.0-beta6",
       "resolved": "https://registry.npmjs.org/pug/-/pug-2.0.0-beta6.tgz"
     },
     "pug-lint": {

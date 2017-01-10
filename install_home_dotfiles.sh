@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
+# These scripts will initial setup by symlink dotfiles at home directory
+
 # get current dir
-DOTFILES_DIR="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
+dotfiles_dir="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# symlinks
-
-ln -s "$DOTFILES_DIR/home/.bash_profile" ~
-ln -s "$DOTFILES_DIR/home/.bashrc" ~
-ln -s "$DOTFILES_DIR/home/.gemrc" ~
+ln -s "${dotfiles_dir}/home/.bash_profile" ~
+ln -s "${dotfiles_dir}/home/.bashrc" ~
+ln -s "${dotfiles_dir}/home/.gemrc" ~
 mkdir -p ~/.bundle
-ln -s "$DOTFILES_DIR/home/.bundle/config" ~/.bundle/
+ln -s "${dotfiles_dir}/home/.bundle/config" ~/.bundle/

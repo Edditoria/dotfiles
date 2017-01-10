@@ -10,7 +10,7 @@ git stash apply
 
 # touch the previous commit
 # [!] dangerous for public commit. read doc first
-git commit --amend # add changes to previous commit
+git commit --amend --reuse-message=HEAD # add changes to previous commit
 git commit --amend -m "test" # add message to previous commit
 # Vi comes out and:
 # hit `i`, add message if need, hit esc

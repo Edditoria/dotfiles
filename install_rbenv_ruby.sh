@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-OS_VERSION="$(sw_vers -productVersion | sed 's:.[[:digit:]]*.$::g')"
+# These scripts will install rbenv
+# And then ruby version that fit to rails
+# And then try to install rails gem
+# !important: Need to update version manually, info: http://guides.rubyonrails.org
 
 mkdir -p "$(rbenv root)/plugins"
 rbenv install 2.3.3
@@ -24,7 +27,8 @@ rbenv which bundle # /Users/Edditoria/.rbenv/versions/2.3.3/bin/bundle
 
 # Install nokogirl gem in different way
 # This may not fit to your case
-# if [[ $OS_VERSION = "10.10" ]]; then
+# os_version="$(sw_vers -productVersion | sed 's:.[[:digit:]]*.$::g')"
+# if [[ ${os_version} = "10.10" ]]; then
 #   gem install nokogiri -- --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2/
 # fi
 # FUCK YOU RAILS. FUCK YOU NOKOGIRL.
