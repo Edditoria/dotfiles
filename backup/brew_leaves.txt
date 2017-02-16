@@ -1,1 +1,1 @@
-android-platform-tools git git-lfs heroku imagemagick nvm rbenv rbenv-binstubs sqlite
+android-platform-tools git git-lfs heroku imagemagick nvm optipng rbenv rbenv-binstubs sqlite trash

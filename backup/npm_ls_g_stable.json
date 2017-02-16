@@ -6,9 +6,9 @@
       "resolved": "https://registry.npmjs.org/bower/-/bower-1.8.0.tgz"
     },
     "coffee-script": {
-      "version": "1.12.2",
-      "from": "coffee-script@1.12.2",
-      "resolved": "https://registry.npmjs.org/coffee-script/-/coffee-script-1.12.2.tgz"
+      "version": "1.12.3",
+      "from": "coffee-script@1.12.3",
+      "resolved": "https://registry.npmjs.org/coffee-script/-/coffee-script-1.12.3.tgz"
     },
     "coffeelint": {
       "version": "1.16.0",
@@ -31,7 +31,9 @@
       "resolved": "https://registry.npmjs.org/marked/-/marked-0.3.6.tgz"
     },
     "npm": {
-      "version": "4.0.5"
+      "version": "4.2.0",
+      "from": "npm@4.2.0",
+      "resolved": "https://registry.npmjs.org/npm/-/npm-4.2.0.tgz"
     },
     "npm-check": {
       "version": "5.4.0",
@@ -44,9 +46,9 @@
       "resolved": "https://registry.npmjs.org/pug/-/pug-2.0.0-beta6.tgz"
     },
     "pug-lint": {
-      "version": "2.3.0",
-      "from": "pug-lint@2.3.0",
-      "resolved": "https://registry.npmjs.org/pug-lint/-/pug-lint-2.3.0.tgz"
+      "version": "2.4.0",
+      "from": "pug-lint@2.4.0",
+      "resolved": "https://registry.npmjs.org/pug-lint/-/pug-lint-2.4.0.tgz"
     },
     "sass-lint": {
       "version": "1.10.2",
@@ -54,9 +56,9 @@
       "resolved": "https://registry.npmjs.org/sass-lint/-/sass-lint-1.10.2.tgz"
     },
     "stylelint": {
-      "version": "7.7.0",
-      "from": "stylelint@7.7.0",
-      "resolved": "https://registry.npmjs.org/stylelint/-/stylelint-7.7.0.tgz"
+      "version": "7.8.0",
+      "from": "stylelint@7.8.0",
+      "resolved": "https://registry.npmjs.org/stylelint/-/stylelint-7.8.0.tgz"
     },
     "stylint": {
       "version": "1.5.9",
@@ -64,9 +66,9 @@
       "resolved": "https://registry.npmjs.org/stylint/-/stylint-1.5.9.tgz"
     },
     "webpack": {
-      "version": "1.14.0",
-      "from": "webpack@1.14.0",
-      "resolved": "https://registry.npmjs.org/webpack/-/webpack-1.14.0.tgz"
+      "version": "2.2.1",
+      "from": "webpack@2.2.1",
+      "resolved": "https://registry.npmjs.org/webpack/-/webpack-2.2.1.tgz"
     }
   }
 }
