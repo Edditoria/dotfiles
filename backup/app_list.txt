@@ -10,16 +10,17 @@ Amphetamine.app
 Aperture.app
 App Store.app
 Automator.app
+Backup and Sync.app
 Beautune.app
 BrowseShot.app
 Calculator.app
 Calendar.app
 Cask
 Chess.app
+Cleaner for Memory.app
 CodeBox.app
 Coffitivity.app
 Contacts.app
-Covered.app
 Cross DJ Free.app
 DVD Player.app
 Dashboard.app
@@ -40,12 +41,10 @@ Icon Tool for Developers.app
 IconFly.app
 Image Capture.app
 Keynote.app
-LEGO Marvel Super Heroes.app
 LINE.app
 Launchpad.app
 Mail.app
 Maps.app
-Memory Cleaner.app
 Messages.app
 Mission Control.app
 MonthlyCal.app
@@ -54,6 +53,7 @@ Numbers.app
 Pages.app
 Photo Booth.app
 PhotoResize.app
+PhotoScapeX.app
 Photos.app
 PixelEditor.app
 Pixelmator.app
