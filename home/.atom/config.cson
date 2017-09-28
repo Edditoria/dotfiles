@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "5101e198-7ec6-45c6-b302-0639229f0961"
   "atom-minimap-titles":
     font: "banner"
   "autocomplete-plus":
@@ -8,15 +11,17 @@
     disabledPackages: [
       "metrics"
       "linter-scss-lint"
-      "autocomplete-atom-api"
       "exception-reporting"
       "coffee-compile"
       "meteor-api"
+      "linter-tidy"
+      "merge-conflicts"
     ]
+    projectHome: "/Users/Edditoria/dev"
     telemetryConsent: "no"
     themes: [
       "one-light-ui"
-      "one-light-syntax"
+      "pen-paper-coffee-syntax"
     ]
   editor:
     fontFamily: "'DejaVu Sans Mono'"
@@ -26,12 +31,13 @@
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-jshint": {}
   "linter-stylelint":
     disableWhenNoConfig: false
     useStandard: true
+  "linter-ui-default":
+    panelHeight: 231
   "markdown-preview":
     breakOnSingleNewline: true
     useGitHubStyle: true
@@ -39,8 +45,7 @@
     plugins:
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
-  pigments:
-    markerType: "dot"
+  pigments: {}
   "preview-plus":
     livePreview: true
   "source-preview": {}
