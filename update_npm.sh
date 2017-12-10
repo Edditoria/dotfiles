@@ -43,6 +43,6 @@ echo "======="
 echo "Update finish. Here are the npm you are using:"
 nvm ls
 echo ""
-echo "Reminder: You need to manually do `npm-check -ug` for each npm"
+echo "Reminder: You need to manually do \`npm-check -ug\` for each npm"
 echo ""
 nvm use default
