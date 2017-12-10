@@ -1,6 +1,6 @@
 git add -A # includes deletions
 git log / git log --summary
-git remote add origin [url] / git upstream add origin [url]
+git remote add origin <url>
 git push -u origin master # -u: remember master > origin
 
 git checkout -- <filename> # unmodifying a modified file
@@ -13,6 +13,6 @@ git stash apply
 git commit --amend --reuse-message=HEAD # add changes to previous commit
 git commit --amend -m "test" # add message to previous commit
 # Vi comes out and:
-# hit `i`, add message if need, hit esc
-# hit `:` `w` `q` `return`
+# press [i], add message if need, press [esc]
+# press [:] [w] [q] [return]
 git push -f <remote> <branch> # remember to do it
