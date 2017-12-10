@@ -27,7 +27,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 - `tt` to print my stupid note for some Terminal commands.
 - `. update_appstore.sh` to update Mac apps from AppStore.
 - `. update_brew.sh` to update brew and cask apps.
-- `. update_npm.sh` to update npm and packages (stable, lts/argon and lts/boron)
+- `. update_npm.sh` to update npm and packages (stable, lts/\*)
 - `. backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt, etc.
 - `npm check -gu` for each npm version to interactively upgrade npm packages.
 
