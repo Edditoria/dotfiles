@@ -17,7 +17,6 @@ Calculator.app
 Calendar.app
 Cask
 Chess.app
-Cleaner for Memory.app
 CodeBox.app
 Coffitivity.app
 Contacts.app
@@ -45,7 +44,9 @@ LINE.app
 Launchpad.app
 Mail.app
 Maps.app
+Memory Cleaner.app
 Messages.app
+Meta.app
 Mission Control.app
 MonthlyCal.app
 Notes.app
