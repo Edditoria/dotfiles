@@ -30,6 +30,7 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+    softTabs: false
     softWrap: true
   linter: {}
   "linter-jshint": {}
