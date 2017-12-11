@@ -31,9 +31,9 @@
       "resolved": "https://registry.npmjs.org/marked/-/marked-0.3.6.tgz"
     },
     "npm": {
-      "version": "5.4.2",
-      "from": "npm@5.4.2",
-      "resolved": "https://registry.npmjs.org/npm/-/npm-5.4.2.tgz"
+      "version": "5.6.0",
+      "from": "npm@5.6.0",
+      "resolved": "https://registry.npmjs.org/npm/-/npm-5.6.0.tgz"
     },
     "npm-check": {
       "version": "5.4.5",
