@@ -18,4 +18,4 @@ nvm alias boron $(nvm version lts/boron) # for better control, and type faster
 nvm install lts/carbon
 nvm alias carbon $(nvm version lts/carbon) # for better control, and type faster
 nvm alias default carbon
-nvm use boron
+nvm use carbon
