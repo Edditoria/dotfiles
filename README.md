@@ -162,6 +162,21 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 > *extra note:*
 > You still need to `be {command}` (alias of `bundle exec`) and `rbenv rehash`
 
+## Python Dev Env
+
+1. check the current Python environment:
+
+  ```
+  exec $SHELL -l # restart shell as a login shell
+  pyenv -v
+  ```
+
+1. install pyenv and Python:
+
+  ```
+  cd ~/dev/dotfiles && source install_pyenv.sh
+  ```
+
 ## Other Things
 
 - add **Novel_customized** theme to Terminal
