@@ -77,7 +77,6 @@ Softmatic QR Perfect.app
 Spectrum.app
 Stickies.app
 System Preferences.app
-Tagr.app
 TextEdit.app
 Time Machine.app
 TuneSpan.app
@@ -89,6 +88,5 @@ WiFi Explorer.app
 Wunderlist.app
 Xcode.app
 iBooks.app
-iD3 Editor.app
 iDenoise.app
 iTunes.app
