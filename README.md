@@ -17,14 +17,20 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 - Current OS: OSX 10.10.5
 - dotfiles dir: `~/dev/dotfiles` *(not `.dotfiles`)*
-- I keep my Cask app in customized directory `/Applications/Cask` (option is saved in `.bash_profile`)
-- My `nvm alias default` is `boron` (neither `stable` nor `lts/boron`)
-- I use `nvm` to manage `npm`; and `rbenv` & `bundler` to manage `ruby` & projects
+- app/package managers:
+  - Mac AppStore for apps
+  - `brew cask` for more apps
+  - `brew` for cli tools
+  - `nvm` to manage `npm` to manage `node`
+  - `rbenv` & `bundler` to manage `ruby`
+  - `pyenv` & `pip` to manage `python`
+- I keep my Cask apps in customized directory: `/Applications/Cask` (option is saved in `.bash_profile`)
+- My `nvm alias default` is `carbon` (neither `stable` nor `lts/carbon`)
 - I keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
 
-# Useful Command
+# Useful Commands
 
-- `tt` to print my stupid note for some Terminal commands.
+- `tt` and `gg` to print my stupid note for some Terminal commands.
 - `. update_appstore.sh` to update Mac apps from AppStore.
 - `. update_brew.sh` to update brew and cask apps.
 - `. update_npm.sh` to update npm and packages (stable, lts/\*)
@@ -105,7 +111,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   ```
 
 1. config Atom: in Atom main menu, "Install Shell Commands".
-1. config cask apps, especially Github Desktop, Evernote.
+1. config cask apps, especially Evernote.
 
 ## Javascript Dev Env
 
@@ -128,7 +134,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. install npm packages:
 
   ```
-  npm install -g coffee-script
+  npm install -g coffeescript
   ```
 
 1. install Meteor.js :
@@ -183,9 +189,9 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   - then set as default and re-open Terminal
 - manually install apps that are not in caskroom nor Apple AppStore:
   - PushBullet.app (fade out by official)
-  - Tagr.app (free version fade out by official)
   - Tune Instructor.app v3.5 (v3.6 requires OSX El Capitan)
   - Chrome, Dropbox, Google Drive \#todo
+  - Tuxera NTFS (bundled in Toshiba external hard drive)
 - manually config notification center
 - check Accessibility in Security & Privacy
 
