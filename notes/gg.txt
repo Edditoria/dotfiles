@@ -1,3 +1,5 @@
+# commit keywords: feat, fix, docs, style, refactor, pref, test, chore
+
 git add -A # includes deletions
 git log / git log --summary
 git remote add origin <url>
@@ -8,8 +10,7 @@ git reset HEAD <filename> # unstage (undo) the change [!] read doc about --soft 
 git stash # save current branch but not commit it [!]
 git stash apply
 
-# touch the previous commit
-# [!] dangerous for public commit. read doc first
+# touch the previous commit [!] dangerous for public commit
 git commit --amend --reuse-message=HEAD # add changes to previous commit
 git commit --amend -m "test" # add message to previous commit
 # Vi comes out and:
