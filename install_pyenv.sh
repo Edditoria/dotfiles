@@ -4,7 +4,7 @@
 
 pyenv install 2.7.14
 pyenv install 3.6.3
-pyenv global 3.6.3
+pyenv global system
 echo "[\$_\$] rbenv versions"
 pyenv versions
 echo "[\$_\$] pip --version"
