@@ -72,7 +72,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. Initial config Git and GitLab:
 
 	```
-	source init_git.sh
+	source setup_git.sh
 	```
 
 	> *note:*
@@ -83,7 +83,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. Initial install Dotfiles:
 
 	```
-	cd ~/dev/dotfiles && source install_home_dotfiles.sh
+	cd ~/dev/dotfiles && source setup_dotfiles.sh
 	cd ~ && source ~/.bash_profile
 	```
 
@@ -100,7 +100,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. install homebrew formulae and cask apps:
 
 	```
-	cd ~/dev/dotfiles && source install_brew_cask_formulae.sh
+	cd ~/dev/dotfiles && source setup_homebrew.sh
 	```
 
 1. check your brew leaves and cask apps:
@@ -120,7 +120,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	```
 	cd ~ && source .bash_profile
 	nvm --version # check
-	cd ~/dev/dotfiles && source install_npm.sh
+	cd ~/dev/dotfiles && source setup_nvm.sh
 	```
 
 1. do some checking:
@@ -156,7 +156,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. install rbenv and Ruby:
 
 	```
-	cd ~/dev/dotfiles && source install_rbenv.sh
+	cd ~/dev/dotfiles && source setup_rbenv.sh
 	rails -v # better to check manually
 	```
 
@@ -180,7 +180,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. install pyenv and Python:
 
 	```
-	cd ~/dev/dotfiles && source install_pyenv.sh
+	cd ~/dev/dotfiles && source setup_pyenv.sh
 	```
 
 ## Other Things
