@@ -24,7 +24,7 @@ export PS1="\n\[$(tput setaf 6)\]\u\[$(tput sgr0)\]@\[$(tput setaf 6)\]\h\[$(tpu
 # nvm for npm
 export NVM_DIR=~/.nvm
 if [[ -s $(brew --prefix nvm)/nvm.sh ]]; then
-  source $(brew --prefix nvm)/nvm.sh
+	source $(brew --prefix nvm)/nvm.sh
 fi
 
 # rbenv for ruby

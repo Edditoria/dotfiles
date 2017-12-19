@@ -20,13 +20,13 @@ backup_dir="${dotfiles_dir}/backup"
 # backup procedure starts
 
 function backup_npm {
-  local this_ver=${1}
-  nvm use ${this_ver}
-  npm ls -g --depth=0 --json > "${backup_dir}/npm_ls_g_${this_ver}.json"
-  echo "# Test: read npm global packages file (${this_ver})"
-  echo ${hline}
-  cat "${backup_dir}/npm_ls_g_${this_ver}.json"
-  echo " "
+	local this_ver=${1}
+	nvm use ${this_ver}
+	npm ls -g --depth=0 --json > "${backup_dir}/npm_ls_g_${this_ver}.json"
+	echo "# Test: read npm global packages file (${this_ver})"
+	echo ${hline}
+	cat "${backup_dir}/npm_ls_g_${this_ver}.json"
+	echo " "
 }
 backup_npm stable
 backup_npm argon
