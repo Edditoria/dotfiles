@@ -1,6 +1,9 @@
-alias gd='cd ~/dev'
-alias tt='cat ~/dev/dotfiles/notes/tt.txt'
-alias gg='cat ~/dev/dotfiles/notes/gg.txt'
+export DEV="$HOME/dev"
+export DOTFILES="$DEV/dotfiles"
+
+alias gd="cd $DEV"
+alias tt="cat $DOTFILES/notes/tt.txt"
+alias gg="cat $DOTFILES/notes/gg.txt"
 
 alias aa='alias'
 alias be='bundle exec'

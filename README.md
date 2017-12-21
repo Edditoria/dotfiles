@@ -89,120 +89,123 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 ## Install Homebrew and Brew Things
 
-1. install Homebrew:
+1. Install Homebrew:
 
-	```
+	```shell
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew doctor # may need to fix some problems
 	brew update
+	brew install rbenv
 	```
 
-1. install homebrew formulae and cask apps:
+1. Install homebrew formulae and cask apps:
 
-	```
-	cd ~/dev/dotfiles && source setup_homebrew.sh
+	```shell
+	cd $DOTFILES && source setup_homebrew.sh
 	```
 
-1. check your brew leaves and cask apps:
+1. Check your brew leaves and cask apps:
 
-	```
+	```shell
 	brew leaves
 	brew cask list
 	```
 
-1. config Atom: in Atom main menu, "Install Shell Commands".
-1. config cask apps, especially Evernote.
+1. Config Atom: in Atom main menu, "Install Shell Commands".
+1. Config cask apps, especially Evernote.
 
 ## Javascript Dev Env
 
-1. install npm using nvm:
+1. Install npm using nvm:
 
-	```
-	cd ~ && source .bash_profile
+	```shell
+	source ~/.bash_profile
 	nvm --version # check
-	cd ~/dev/dotfiles && source setup_nvm.sh
+	cd $DOTFILES && source setup_nvm.sh
 	```
 
-1. do some checking:
+1. Do some checking:
 
-	```
+	```shell
 	nvm ls # check
 	node -v # check
-	node ~/dev/dotfiles/test/test_node.js # open browser to see Hello World
+	node $DOTFILES/test/test_node.js # open browser to see Hello World
 	```
 
-1. install npm packages:
+1. Install npm packages:
 
-	```
+	```shell
 	npm install -g coffeescript
+	# also check out the npm_*.json files for package lists
 	```
 
-1. install Meteor.js :
+1. Install Meteor.js :
 
-	```
+	```shell
 	curl https://install.meteor.com/ | sh
 	```
 
 ## Ruby Dev Env
 
-1. check current Ruby environment:
+1. Check current Ruby environment:
 
-	```
+	```shell
 	exec $SHELL -l # restart shell as a login shell
 	rbenv -v
 	which ruby-build # /Users/Edditoria/.rbenv/shims/gem
 	```
 
-1. install rbenv and Ruby:
+1. Install Ruby versions:
 
-	```
-	cd ~/dev/dotfiles && source setup_rbenv.sh
+	```shell
+	cd $DOTFILES && source setup_rbenv.sh
 	rails -v # better to check manually
 	```
 
 > *note:*
-> In my experience, Rails installation failed **every single time**.
+> In my experience, Rails installation failed every single time.
 > Different error may occur in the different version of rails in different MacOS.
 > Sorry that you may need to investigate the error by yourself.
 
 > *extra note:*
-> You still need to `be {command}` (alias of `bundle exec`) and `rbenv rehash`
+> You still need to `be {command}` (alias of `bundle exec`) and `rbenv rehash` manually.
 
 ## Python Dev Env
 
-1. check the current Python environment:
+1. Check the current Python environment:
 
-	```
+	```shell
 	exec $SHELL -l # restart shell as a login shell
 	pyenv -v
 	```
 
-1. install pyenv and Python:
+1. Install Python versions:
 
-	```
-	cd ~/dev/dotfiles && source setup_pyenv.sh
+	```shell
+	cd $DOTFILES && source setup_pyenv.sh
 	```
 
 ## Other Things
 
-- add **Novel_customized** theme to Terminal
-	- then set as default and re-open Terminal
-- manually install apps that are not in caskroom nor Apple AppStore:
+- Add **Novel_customized** theme to Terminal.
+	- Then set as default and re-open Terminal.
+- Manually setup apm packages, npm packages, login items according to backup files.
+- Manually install apps that are not in caskroom nor Apple AppStore:
 	- PushBullet.app (fade out by official)
 	- Tune Instructor.app v3.5 (v3.6 requires OSX El Capitan)
 	- Chrome, Dropbox, Google Drive \#todo
 	- Tuxera NTFS (bundled in Toshiba external hard drive)
-- manually config notification center
-- check Accessibility in Security & Privacy
+- Manually config notification center.
+- Check Accessibility in Security & Privacy.
 
 # \#todo
 
-- merge my Evernote: Setup Dev Env 2014
-- build checking system:
-	- check dotfiles directory
-	- compare installed things, and monitor them
-	- compare updated packages in npm, brew and etc. (using private log)
-- a Maintenance session to includes:
-	- backup npm and meteorjs
-	- update Accessibility in Security & Privacy
-	- update Login Items in Users & Groups
+- Merge my Evernote: Setup Dev Env 2014.
+- Build checking system:
+	- Check dotfiles directory.
+	- Compare installed things, and monitor them.
+	- Compare updated packages in npm, brew and etc. (using private log).
+- A maintenance session in README to includes:
+	- Backup npm and meteorjs
+	- Update Accessibility in Security & Privacy.
+	- Update Login Items in Users & Groups.
