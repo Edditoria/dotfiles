@@ -4,8 +4,7 @@
 
 pyenv install 2.7.14
 pyenv install 3.6.3
-pyenv global system
-echo "[\$_\$] rbenv versions"
+echo "[\$_\$] pyenv versions"
 pyenv versions
 echo "[\$_\$] pip --version"
 pip --version
@@ -13,3 +12,6 @@ pip --version
 pip install Django
 echo "[\$_\$] print django verion:"
 python -c "import django; print(django.get_version())"
+
+echo "Switch back to pyenv global system"
+pyenv global system
