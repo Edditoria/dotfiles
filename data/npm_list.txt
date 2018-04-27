@@ -1,0 +1,15 @@
+coffeescript # install this first
+bower
+codo
+coffeelint
+hbs-cli
+hexo-cli
+jshint
+marked
+npm-check
+pug
+pug-lint
+sass-lint
+stylelint
+stylint
+webpack

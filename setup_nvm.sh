@@ -8,9 +8,15 @@
 # 4. latest carbon
 # Then, nvm alias: "argon" to latest argon, and "boron" to latest boron
 # Then, npm alias default boron
+# For each versions, global packages will be installed
 # !important: alias will be used for update_brew.sh in future
 
+npm_list_file="$DOTFILES/data/npm_list.txt"
+source $DOTFILES/utils/run_by_line.sh
+
 nvm install stable
+# nvm auto switch to stable. Nice!
+run_by_line "npm install --global" $npm_list_file
 
 node_list=(
 	"argon"
@@ -19,7 +25,9 @@ node_list=(
 )
 for node in "${node_list[@]}"; do
 	nvm install lts/$node
+	# nvm auto switch to this version. Nice!
 	nvm alias $node $(nvm version lts/$node) # for better control, and type faster
+	run_by_line "npm install --global" $npm_list_file
 done
 
 nvm alias default carbon
