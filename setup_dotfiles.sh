@@ -3,7 +3,7 @@
 # These scripts will initial setup by symlink dotfiles at home directory
 
 # get current dir
-dotfiles_dir="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
+dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ln -s "${dotfiles_dir}/home/.bash_profile" ~
 ln -s "${dotfiles_dir}/home/.bashrc" ~

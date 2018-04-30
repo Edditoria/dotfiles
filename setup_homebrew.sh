@@ -3,7 +3,7 @@
 # These scripts will install brew formulae and Cask apps
 
 # get current dir
-dotfiles_dir="$( CD "$( dirname "${BASH_SOURCE[0]}")" && pwd)"
+dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 backup_dir="$dotfiles_dir/backup"
 
 # update Homebrew and formulae

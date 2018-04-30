@@ -11,8 +11,11 @@
 # For each versions, global packages will be installed
 # !important: alias will be used for update_brew.sh in future
 
-npm_list_file="$DOTFILES/data/npm_list.txt"
-source $DOTFILES/utils/run_by_line.sh
+# get current dir
+dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+npm_list_file="$dotfiles_dir/data/npm_list.txt"
+source $dotfiles_dir/utils/run_by_line.sh
 
 nvm install stable
 # nvm auto switch to stable. Nice!

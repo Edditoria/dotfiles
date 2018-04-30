@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-apm_list_file="$DOTFILES/data/apm_list.txt"
+# get current dir
+dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source $DOTFILES/utils/run_by_line.sh
+apm_list_file="$dotfiles_dir/data/apm_list.txt"
+
+source $dotfiles_dir/utils/run_by_line.sh
 run_by_line "apm install" $apm_list_file
