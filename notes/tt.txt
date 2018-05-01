@@ -1,11 +1,8 @@
-mv <file/directory>
-cat <file>
-pwd
+mv <file/directory>	;;	cat <file>	;;	pwd
 which (rather than whereis)
-pdpaste
+echo "something" | pbcopy	;;	echo `pbpaste`
 
 # npm
-npm install -g <package>
 nvm install lts/boron --reinstall-packages-from=boron
 npm-check -gu
 
