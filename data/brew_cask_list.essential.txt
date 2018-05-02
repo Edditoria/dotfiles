@@ -1,0 +1,16 @@
+appcleaner
+atom
+coconutbattery
+dropbox
+firefox
+google-backup-and-sync
+google-chrome
+imageoptim
+lastpass
+origami-studio
+sourcetree
+spectacle
+sublime-text
+xquartz
+caskroom/fonts/font-dejavu-sans
+caskroom/fonts/font-noto-sans-cjk

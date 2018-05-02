@@ -1,0 +1,13 @@
+android-file-transfer
+android-platform-tools
+cakebrew
+cheatsheet
+enjoyable
+evernote
+helium
+isyncr
+itsycal
+spotify
+steam
+tuneinstructor
+vlc
