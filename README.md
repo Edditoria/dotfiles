@@ -40,6 +40,15 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 ## Prepare Before Dotfiles
 
 1. Make sure your internet connection is stable.
+1. Change your computer name and local host name:
+
+	```shell
+	computer_name="EddiMBP" # replace with your preferred name
+	sudo scutil --set ComputerName "$computer_name"
+	sudo scutil --set LocalHostName "$computer_name"
+	dscacheutil -flushcache
+	```
+
 1. Install Xcode command line tools or app:
 
 	```shell
