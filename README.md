@@ -10,8 +10,9 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 # My Setup
 
-- Current OS: OSX 10.10.5
-- Dotfiles dir: `~/dev/dotfiles` *(not `.dotfiles`)*
+- Current OS: macOS High Sierra 10.13.3
+- Dev dir: `~/Dropbox/dev`
+- Dotfiles dir: `~/Dropbox/dev/dotfiles`
 - App/package managers:
 	- Mac AppStore for apps
 	- `brew cask` for more apps
@@ -66,12 +67,39 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	git credential-osxkeychain # expect return: "usage:..."
 	```
 
-1. Click the nice **Fork** button in [this repo](https://github.com/Edditoria/dotfiles).
-1. Clone **your own dotfiles repo** to your local machine in `~/dev/dotfiles`:
+1. Install Homebrew:
 
 	```shell
-	export my_git_username='edditoria' # replace your git username
-	export dotfiles_dir="$HOME/dev/dotfiles"
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew doctor # may need to fix some problems
+	brew update
+	```
+
+1. Install Caskroom and Dropbox:
+
+	```shell
+	export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
+	brew tap caskroom/cask
+	brew tap caskroom/fonts
+	brew update
+	brew cask install Dropbox
+	```
+
+1. Open Dropbox.app and setup selective sync for the dev directory: `~/Dropbox/dev`
+
+	> *important note:*
+	> You need to wait until the sync process being completed. Please be patient.
+
+
+## Setup Dotfiles
+
+1. If it is the first time you do dotfiles, click the nice **Fork** button in [this repo](https://github.com/Edditoria/dotfiles).
+1. If the dotfiles directory **does not** exist in your dev directory, clone **your own dotfiles repo** to your local machine in `~/Dropbox/dev/dotfiles`:
+
+	```shell
+	my_git_username="edditoria" # replace with your git username
+	dotfiles_dir="$HOME/Dropbox/dev/dotfiles"
+	cd $dotfiles_dir # skip below commands if the directory already exists
 	mkdir -p $dotfiles_dir
 	git clone https://github.com/$my_git_username/dotfiles.git $dotfiles_dir
 	cd $dotfiles_dir && git remote -v && ls
@@ -80,6 +108,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. Initial install dotfiles:
 
 	```shell
+	cd ~/Dropbox/dev/dotfiles
 	source setup_dotfiles.sh
 	source ~/.bash_profile
 	```
@@ -96,21 +125,12 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	> - Paste the key to this URL: <https://gitlab.com/profile/keys>
 
 
-## Install Homebrew and Brew Things
-
-1. Install Homebrew:
-
-	```shell
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew doctor # may need to fix some problems
-	brew update
-	brew install rbenv
-	```
+## Install Brew Formulae and Cask Apps
 
 1. Install homebrew formulae and cask apps:
 
 	```shell
-	cd $DOTFILES && source setup_homebrew.sh
+	source setup_homebrew.sh
 	```
 
 1. Check your brew leaves and cask apps:
