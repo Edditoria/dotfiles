@@ -140,12 +140,11 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	brew cask list
 	```
 
-1. Config Atom: in Atom main menu, "Install Shell Commands".
 1. Config cask apps, especially Evernote.
 
 ## Javascript Dev Env
 
-1. Install npm using nvm:
+1. Install npm using nvm, and install packages for each npm:
 
 	```shell
 	source ~/.bash_profile
@@ -159,13 +158,6 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	nvm ls # check
 	node -v # check
 	node $DOTFILES/test/test_node.js # open browser to see Hello World
-	```
-
-1. Install npm packages:
-
-	```shell
-	npm install -g coffeescript
-	# also check out the npm_*.json files for package lists
 	```
 
 1. Install Meteor.js :
@@ -188,6 +180,8 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 	```shell
 	cd $DOTFILES && source setup_rbenv.sh
+	gem install nokogirl # troubleshoot if problem exists
+	gem install rails
 	rails -v # better to check manually
 	```
 
@@ -216,13 +210,21 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 ## Other Things
 
+- Setup symlink to `~/dev`
+
+	```shell
+	ln -s $DEV $HOME/dev
+	```
+
 - Add **Novel_customized** theme to Terminal.
-	- Then set as default and re-open Terminal.
+
+	```shell
+	source setup_terminal.sh
+	```
+
 - Manually setup apm packages, npm packages, login items according to backup files.
 - Manually install apps that are not in caskroom nor Apple AppStore:
 	- PushBullet.app (fade out by official)
-	- Tune Instructor.app v3.5 (v3.6 requires OSX El Capitan)
-	- Chrome, Dropbox, Google Drive \#todo
 	- Tuxera NTFS (bundled in Toshiba external hard drive)
 - Manually config notification center.
 - Check Accessibility in Security & Privacy.
