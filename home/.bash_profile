@@ -1,5 +1,4 @@
-export DROPBOX="$HOME/Dropbox"
-export DEV="$DROPBOX/dev"
+export DEV="$HOME/dev"
 export DOTFILES="$DEV/dotfiles"
 
 alias gd="cd $DEV"
