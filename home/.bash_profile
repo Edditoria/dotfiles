@@ -7,7 +7,7 @@ alias gg="cat $DOTFILES/notes/gg.txt"
 
 alias aa='alias'
 alias be='bundle exec'
-alias ls='ls -Gha'
+alias ls='ls -AFGh'
 alias ll='ls -l'
 alias ..='cd .. && ls'
 
