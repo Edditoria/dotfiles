@@ -11,8 +11,8 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 # My Setup
 
 - Current OS: macOS High Sierra 10.13.3
-- Dev dir: `~/Dropbox/dev`
-- Dotfiles dir: `~/Dropbox/dev/dotfiles`
+- Dev dir: `~/dev`
+- Dotfiles dir: `~/dev/dotfiles`
 - App/package managers:
 	- Mac AppStore for apps
 	- `brew cask` for more apps
@@ -75,31 +75,24 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	brew update
 	```
 
-1. Install Caskroom and Dropbox:
+1. Install Caskroom:
 
 	```shell
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 	brew tap caskroom/cask
 	brew tap caskroom/fonts
 	brew update
-	brew cask install Dropbox
 	```
-
-1. Open Dropbox.app and setup selective sync for the dev directory: `~/Dropbox/dev`
-
-	> *important note:*
-	> You need to wait until the sync process being completed. Please be patient.
 
 
 ## Setup Dotfiles
 
 1. If it is the first time you do dotfiles, click the nice **Fork** button in [this repo](https://github.com/Edditoria/dotfiles).
-1. If the dotfiles directory **does not** exist in your dev directory, clone **your own dotfiles repo** to your local machine in `~/Dropbox/dev/dotfiles`:
+1. If the dotfiles directory **does not** exist in your dev directory, clone **your own dotfiles repo** to your local machine in `~/dev/dotfiles`:
 
 	```shell
-	my_git_username="edditoria" # replace with your git username
-	dotfiles_dir="$HOME/Dropbox/dev/dotfiles"
-	cd $dotfiles_dir # skip below commands if the directory already exists
+	my_git_username="Edditoria" # replace with your git username
+	dotfiles_dir="$HOME/dev/dotfiles" # change it if your want
 	mkdir -p $dotfiles_dir
 	git clone https://github.com/$my_git_username/dotfiles.git $dotfiles_dir
 	cd $dotfiles_dir && git remote -v && ls
@@ -108,7 +101,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 1. Initial install dotfiles:
 
 	```shell
-	cd ~/Dropbox/dev/dotfiles
+	cd ~/dev/dotfiles
 	source setup_dotfiles.sh
 	source ~/.bash_profile
 	```
