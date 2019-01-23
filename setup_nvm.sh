@@ -6,6 +6,7 @@
 # 2. latest argon
 # 3. latest boron
 # 4. latest carbon
+# 5. latest dubnium
 # Then, nvm alias: "argon" to latest argon, and "boron" to latest boron
 # Then, npm alias default boron
 # For each versions, global packages will be installed
@@ -25,6 +26,7 @@ node_list=(
 	"argon"
 	"boron"
 	"carbon"
+	"dubnium"
 )
 for node in "${node_list[@]}"; do
 	nvm install lts/$node
@@ -33,5 +35,5 @@ for node in "${node_list[@]}"; do
 	run_by_line "npm install --global" $npm_list_file
 done
 
-nvm alias default carbon
-nvm use carbon
+nvm alias default dubnium
+nvm use dubnium

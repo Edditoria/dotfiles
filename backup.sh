@@ -32,6 +32,7 @@ backup_npm stable
 backup_npm argon
 backup_npm boron
 backup_npm carbon
+backup_npm dubnium
 
 echo $( apm list --installed --bare ) > "${backup_dir}/apm_list.json"
 echo "# Test: read apm packages file"

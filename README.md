@@ -21,7 +21,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	- `rbenv` and `bundler` to manage `ruby`
 	- `pyenv` and `pip` to manage `python`
 - Cask apps in customized directory: `/Applications/Cask`
-- `nvm alias default` is `carbon` (neither `stable` nor `lts/carbon`)
+- `nvm alias default` is `dubnium` (neither `stable` nor `lts/dubnium`)
 - Keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
 
 # Useful Commands
