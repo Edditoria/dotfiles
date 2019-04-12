@@ -5,11 +5,10 @@ alias gd="cd $DEV"
 alias tt="cat $DOTFILES/notes/tt.txt"
 alias gg="cat $DOTFILES/notes/gg.txt"
 
-alias aa='alias'
 alias be='bundle exec'
-alias ls='ls -AFGh'
-alias ll='ls -l'
-alias ..='cd .. && ls'
+alias l='ls -AFG'
+alias ll='ls -AFG -lh'
+alias ..='cd .. && ls -AFG'
 
 alias gs='git status'
 alias npmls='npm ls --depth=0'
