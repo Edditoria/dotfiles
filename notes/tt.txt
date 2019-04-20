@@ -1,14 +1,16 @@
-mv <file/directory>	;;	cat <file>	;;	pwd
+mv <file/directory>	🔸	cat <file>	🔸	pwd
 which (rather than whereis)
-echo "something" | pbcopy	;;	echo `pbpaste`
+echo "foobar" | pbcopy	🔸	echo `pbpaste`
 
-# npm
+# Node
 nvm install lts/boron --reinstall-packages-from=boron
-npm-check -gu
 
-# maintain
-cat ~/dev/dotfiles/update.sh
+# Ruby
+rbenv install --list
 
-# others
-aa to read alias (npmls, npmlsg, ll, be, etc.)
-gg to read git notes
+# Maintain
+cat ~/dev/dotfiles/update*.sh
+
+# Others
+alias # for more shortcuts (npmls[g], ll, be, etc.)
+gg # to read git notes

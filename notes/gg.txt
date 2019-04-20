@@ -1,19 +1,19 @@
-# commit keywords: feat, fix, docs, style, refactor, pref, test, chore
+# Commit keywords: feat, fix, docs, style, refactor, pref, test, chore
 
 git add -A # includes deletions
 git log / git log --summary
 git remote add origin <url>
-git push -u origin master # -u: remember master > origin
+git push -u origin master # -u: Remember master → origin
 
-git checkout -- <filename> # unmodifying a modified file
-git reset HEAD <filename> # unstage (undo) the change [!] read doc about --soft and --hard
-git stash # save current branch but not commit it [!]
+git checkout -- <filename> # Unmodifying a modified file
+git reset HEAD <filename> # Unstage/Undo changes; Read doc about --soft and --hard
+git stash # Save current branch but not commit it
 git stash apply
 
-# touch the previous commit [!] dangerous for public commit
-git commit --amend --reuse-message=HEAD # add changes to previous commit
-git commit --amend -m "test" # add message to previous commit
-# Vi comes out and:
-# press [i], add message if need, press [esc]
-# press [:] [w] [q] [return]
-git push -f <remote> <branch> # remember to do it
+# Touch the previous commit ⚠️  dangerous for public commit
+git commit --amend --no-edit
+git commit --amend -m "test" # Change message over previous commit
+# When Vi is opened:
+# ⌨️  [i] → add message → [esc]
+# ⌨️  [:wq][return]
+git push -f <remote> <branch> # Remember to do it
