@@ -215,7 +215,7 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 	source setup_terminal.sh
 	```
 
-- Manually setup apm packages, npm packages, login items according to backup files.
+- Manually setup npm packages, login items according to backup files.
 - Manually install apps that are not in caskroom nor Apple AppStore:
 	- PushBullet.app (fade out by official)
 	- Tuxera NTFS (bundled in Toshiba external hard drive)

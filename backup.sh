@@ -2,8 +2,6 @@
 
 # These scripts will backup the "lists" of:
 # - npm packages in nvm: stable, argon and boron (not lts/*)
-# - app settings:
-#   - apm (atom)
 # - Homebrew leaves
 # - Cask apps
 # - Mac apps (excludes Cask apps)
@@ -33,12 +31,6 @@ backup_npm argon
 backup_npm boron
 backup_npm carbon
 backup_npm dubnium
-
-echo $( apm list --installed --bare ) > "${backup_dir}/apm_list.json"
-echo "# Test: read apm packages file"
-echo ${hline}
-cat "${backup_dir}/apm_list.json"
-echo " "
 
 echo $( brew leaves ) > "${backup_dir}/brew_leaves.txt"
 echo "# Test: read Brew leaves txt file"

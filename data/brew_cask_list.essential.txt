@@ -1,5 +1,4 @@
 appcleaner
-atom
 coconutbattery
 dropbox
 firefox
