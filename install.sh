@@ -10,7 +10,7 @@ fi
 	echo '[setup:git] Start...'
 
 	# Exclude Github Codespaces
-	if [ ! -d "/workspaces/.codespaces/.persistedshare" ]; then
+	if [ ! "$CODESPACES" = true ]; then
 		source $this_file_path/functions/setup_git_user.sh
 		setup_git_user
 	fi
