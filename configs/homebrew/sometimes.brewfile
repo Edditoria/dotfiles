@@ -1,0 +1,28 @@
+# Brewfile: The Homebrew Bundle for macOS
+
+# "Sometimes" means that I could installed these apps/cli anytime.
+
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "supabase/tap"
+
+cask_args appdir: "/Applications/Cask"
+
+# Dev
+
+cask "android-file-transfer"
+cask "android-platform-tools"
+cask "origami-studio"
+
+# Others
+
+cask "cakebrew"
+cask "cheatsheet"
+cask "enjoyable"
+cask "firefox"
+cask "google-backup-and-sync"
+cask "google-chrome"
+cask "helium"
+cask "isyncr"
+cask "steam"
+cask "tuneinstructor"

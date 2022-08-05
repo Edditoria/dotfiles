@@ -1,0 +1,32 @@
+# Brewfile: The Homebrew Bundle for macOS
+
+# "Essentials" means that I need these apps/cli for daily works, but not that urgent after I reinstall OS.
+
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "supabase/tap"
+
+cask_args appdir: "/Applications/Cask"
+
+# Dev
+
+brew "heroku"
+cask "font-dejavu-sans"
+cask "font-noto-sans-cjk"
+
+# Design
+
+brew "imagemagick"
+brew "optipng"
+cask "imageoptim"
+
+# Others
+
+brew "trash"
+cask "appcleaner"
+cask "coconutbattery"
+cask "evernote"
+cask "itsycal"
+cask "spectacle"
+cask "spotify"
+cask "vlc"

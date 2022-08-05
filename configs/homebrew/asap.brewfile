@@ -1,0 +1,32 @@
+# Brewfile: The Homebrew Bundle for macOS
+
+# "ASAP" means that these apps/cli should be installed as soon as possible for a fresh-installed OS.
+
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "supabase/tap"
+
+cask_args appdir: "/Applications/Cask"
+
+# System
+
+brew "mas"
+brew "git"
+brew "git-flow-avh"
+brew "git-lfs"
+cask "xquartz"
+
+# Dev
+
+brew "nvm"
+brew "rbenv"
+brew "rbenv-binstubs"
+brew "pyenv"
+brew "sqlite"
+cask "sublime-text"
+cask "sourcetree"
+
+# Others
+
+cask "dropbox"
+cask "lastpass"
