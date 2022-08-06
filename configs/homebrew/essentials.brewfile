@@ -10,23 +10,39 @@ cask_args appdir: "/Applications/Cask"
 
 # Dev
 
-brew "heroku"
-cask "font-dejavu-sans"
-cask "font-noto-sans-cjk"
+brew "cocoapods" # for Swift and Objective-C Cocoa projects.
+brew "jq" # command-line JSON processor.
+brew "kotlin"
+brew "nvm" # Not use it daily, but for test sometimes.
+
+cask "font-noto-sans-cjk" # for browsers.
+cask "font-noto-serif-cjk" # for browsers.
+cask "chromium"
+
+cask "font-dejavu" # VSCode requires it in settings.
+cask "font-sf-mono" # VSCode requires it in settings.
+cask "visual-studio-code"
+
+cask "firefox-developer-edition" # for testing.
+cask "textmate"
+# cask "godot" # is installed via Steam.
 
 # Design
 
 brew "imagemagick"
 brew "optipng"
 cask "imageoptim"
+# aseprite.app is installed via Steam.
 
 # Others
 
+brew "tldr"
 brew "trash"
+cask "airtable"
 cask "appcleaner"
-cask "coconutbattery"
-cask "evernote"
+cask "coconutbattery" # After install, take a snapshot asap.
+cask "forklift"
 cask "itsycal"
-cask "spectacle"
+cask "rectangle"
 cask "spotify"
 cask "vlc"

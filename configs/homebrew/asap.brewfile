@@ -12,21 +12,33 @@ cask_args appdir: "/Applications/Cask"
 
 brew "mas"
 brew "git"
-brew "git-flow-avh"
 brew "git-lfs"
+brew "qt" # deps: Python, node, etc.
+brew "openjdk"
 cask "xquartz"
 
 # Dev
 
-brew "nvm"
+brew "asdf" # deps: coreutils.
 brew "rbenv"
 brew "rbenv-binstubs"
-brew "pyenv"
-brew "sqlite"
+brew "gcc"
+brew "node" # for old macOS only.
+brew "deno"
+brew "supabase/tap/supabase"
+brew "micro" # text editor. Git config had set it.
+brew "lazygit" # Git config had set it.
 cask "sublime-text"
-cask "sourcetree"
+cask "fork"
+cask "docker"
+# brew "node-build" # asdf nodejs has its own node-build.
+# brew "pyenv" # asdf python has its own python-build.
+
+# Design
+
+cask "figma"
 
 # Others
 
-cask "dropbox"
-cask "lastpass"
+cask "dropbox" # Too many files I need in daily workflows.
+cask "utm"

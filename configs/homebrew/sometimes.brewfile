@@ -12,17 +12,21 @@ cask_args appdir: "/Applications/Cask"
 
 cask "android-file-transfer"
 cask "android-platform-tools"
-cask "origami-studio"
+cask "android-studio"
 
 # Others
 
+brew "exifcleaner" # for privacy.
+brew "exiftool" # for file metadata, e.g. `exiftool -all:all`.
+brew "ncdu" # for disk usage.
+brew "poppler" # for PDF files. Commands: pdfinfo, pdfsig, pdffonts, etc.
+cask "brave-browser"
 cask "cakebrew"
 cask "cheatsheet"
+cask "discord"
 cask "enjoyable"
 cask "firefox"
-cask "google-backup-and-sync"
-cask "google-chrome"
-cask "helium"
-cask "isyncr"
+cask "google-drive"
+cask "macvim"
+cask "openemu"
 cask "steam"
-cask "tuneinstructor"
