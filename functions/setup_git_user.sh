@@ -4,7 +4,7 @@ function setup_git_user {
 	local username
 	local email
 
-	if ! which git > /dev/null; then
+	if ! command -v git > /dev/null; then
 		echo "[${FUNCNAME[0]}()] Cannot find git."
 		return 1
 	fi

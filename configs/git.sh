@@ -2,7 +2,7 @@
 
 # NOTE: Don't commit git (user)name and email in this file. Use functions/setup_git_user instead.
 # git config --global user.name Edditoria
-# git config --global user.name '(email@address.la)'
+# git config --global user.email '(email@address.la)'
 
 git config --global core.autocrlf input #linux and #macos
 git config --global color.ui true
@@ -21,6 +21,6 @@ git config --global core.editor micro
 git config --global init.defaultbranch main
 
 # Platform specific: #macos
-if [[ $OSTYPE == 'darwin'* ]]; then
+if [[ "$(uname -s)" == 'Darwin' ]]; then
 	git config --global credential.helper osxkeychain
 fi

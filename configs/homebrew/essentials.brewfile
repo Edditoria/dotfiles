@@ -43,7 +43,7 @@ cask "appcleaner"
 cask "coconutbattery" # After install, take a snapshot asap.
 cask "forklift"
 cask "itsycal"
-cask "rectangle"
+cask "rectangle" # for window management.
 cask "spotify"
 cask "vlc"
 mas "Amphetamine", id: 937984704
