@@ -3,6 +3,21 @@
 # Simple Health Check
 # =================
 
+# Do what Homebrew does:
+if [ -z "${BASH_VERSION:-}" ]; then
+	echo '[dotfiles:install] Require Bash to run this script.'
+	return 1 2> /dev/null || exit 1
+fi
+if [[ -n "${CI-}" && -n "${INTERACTIVE-}" ]]; then
+	echo '[dotfiles:install] Cannot run force-interactive mode in CI.'
+	return 1 2> /dev/null || exit 1
+fi
+if [[ -n "${INTERACTIVE-}" && -n "${NONINTERACTIVE-}" ]]; then
+	echo '[dotfiles:install] Both `$INTERACTIVE` and `$NONINTERACTIVE` are set. Please unset at least one variable and try again.'
+	return 1 2> /dev/null || exit 1
+fi
+# Thanks Homebrew team!
+
 if ! command -v git > /dev/null; then
 	echo '[dotfiles:install] Cannot find git.'
 	return 1 2> /dev/null || exit 1
