@@ -13,6 +13,19 @@ cask_args appdir: "/Applications/Cask"
 cask "android-file-transfer"
 cask "android-platform-tools"
 cask "android-studio"
+mas "Boop", id: 1518425043
+mas "Jayson", id: 1468691718
+mas "Patterns", id: 429449079
+
+# Design
+
+mas "DevSwatch", id: 1477857867
+mas "Noiseless", id: 969978718
+mas "PhotoBulk Lite", id: 1304315057
+mas "PhotoScape X", id: 929507092
+mas "Tonality", id: 892581529
+# mas "Pixen", id: 525180431
+# mas "Prepo", id: 476533227
 
 # Others
 
@@ -30,3 +43,17 @@ cask "google-drive"
 cask "macvim"
 cask "openemu"
 cask "steam"
+mas "Bear", id: 1091189122
+mas "CalcBar", id: 1494615606
+mas "DaisyDisk", id: 411643860
+mas "Developer", id: 640199958
+mas "Filters for Photos", id: 1083965373
+mas "GarageBand", id: 682658836
+mas "GIPHY CAPTURE", id: 668208984
+mas "iMovie", id: 408981434
+mas "Keyword Search", id: 1558453954
+mas "Mactracker", id: 430255202
+mas "Meta", id: 558317092
+mas "Save to Pocket", id: 1477385213
+mas "Skitch", id: 425955336
+# mas "Pilot's Path", id: 1125377264
