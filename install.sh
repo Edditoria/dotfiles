@@ -18,6 +18,14 @@ fi
 	source $this_file_path/functions/setup_git_configs.sh
 	setup_git_configs
 	echo '[setup:git] Done.'
+
+	# Install apps and cli-tools via Homebrew on macOS:
+	if [[ "$(uname -s)" == 'Darwin' ]]; then
+		echo '[install:apps] Start...'
+		source $this_file_path/functions/setup_homebrew.sh
+		setup_homebrew
+		echo '[install:apps] Done.'
+	fi
 ) # Subshell end
 
 # NOTE: Suppose Github Codespaces will run this file at first priority.
