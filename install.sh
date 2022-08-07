@@ -4,6 +4,13 @@ if ! which git > /dev/null; then
 	echo '[setup:git] Cannot find git.'
 	return 1 2> /dev/null || exit 1
 fi
+if [[ "$(uname -s)" == 'Darwin' ]]; then
+	if ! command -v brew > /dev/null; then
+		echo '[dotfiles:install] Cannot find Homebrew.'
+		return 1 2> /dev/null || exit 1
+	fi
+	# TODO: More health check...
+fi
 
 ( # Subshell start
 	this_file_path=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
