@@ -54,6 +54,10 @@ fi
 		setup_homebrew
 		echo '[install:apps] Done.'
 	fi
+
+	# Setup Ruby env: config files:
+	source $this_file_dir/functions/setup_ruby.sh
+	setup_ruby
 ) # Subshell end
 
 # NOTE: Suppose Github Codespaces will run this file at first priority.
