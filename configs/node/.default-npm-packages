@@ -1,0 +1,23 @@
+# File used by asdf: $ASDF_NPM_DEFAULT_PACKAGES_FILE:=$HOME/.default-npm-packages
+# File used by nvm: $NVM_DIR/.default-packages
+
+# Install these first:
+
+coffeescript
+eslint
+prettier
+
+# Then these:
+
+bower
+coffeelint
+# hbs-cli
+# jshint
+marked
+# npm-check
+sass-lint
+stylelint
+
+# NOTE: For asdf and nvm, only add comments in its own line.
+# Ref: `grep` in `filtered_packages` in {asdf_repo}/bin/install
+# Ref: `nvm_get_default_packages()` in nvm_repo}/nvm.sh
