@@ -1,4 +1,4 @@
-# Require to source base.sh first.
+# Requires: $DOTFILES and $DEV
 
 # Override the defaults
 
