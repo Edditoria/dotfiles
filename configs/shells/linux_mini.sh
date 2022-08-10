@@ -53,3 +53,5 @@ function init_rbenv {
 init_asdf
 # init_nvm
 init_rbenv
+source "$DOTFILES/configs/shells/functions/alias.sh"
+source "$DOTFILES/configs/shells/functions/prompt_style.sh"

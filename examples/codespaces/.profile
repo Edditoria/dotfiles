@@ -1,5 +1,8 @@
 export DOTFILES="/workspaces/.codespaces/.persistedshare/dotfiles"
 
-source "$DOTFILES/configs/shells/codespaces.sh"
-source "$DOTFILES/configs/shells/alias.sh"
-# source "$DOTFILES/configs/shells/prompt_style.sh"
+# I source one file directly in my machine:
+# source "$DOTFILES/configs/shells/codespaces.sh"
+
+# But you can take write your own and source what you like:
+source "$DOTFILES/configs/shells/functions/alias.sh"
+# source "$DOTFILES/configs/shells/functions/prompt_style.sh"
