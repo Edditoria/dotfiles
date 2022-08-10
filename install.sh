@@ -36,10 +36,23 @@ fi
 
 ( # Subshell start
 	this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	machine_type='not_supported'
+	if [[ "$CODESPACES" == true ]]; then
+		machine_type='CodeSpaces'
+	elif [[ "$(uname -s)" == 'Darwin' ]]; then
+		machine_type='macOS'
+	elif [[ "$(uname -s)" == 'Linux' ]]; then
+		machine_type='Linux'
+	else
+		echo "[dotfiles:install] Machine type not supported: $(uname -s)"
+		return 1 2> /dev/null || exit 1
+	fi
+
+	# Setup git
 
 	echo '[setup:git] Start...'
-	# Exclude Github Codespaces
-	if [ ! "$CODESPACES" = true ]; then
+	# CodeSpaces already set user in `--system`.
+	if [[ "$machine_type" != 'CodeSpaces' ]]; then
 		source $this_file_dir/functions/setup_git_user.sh
 		setup_git_user
 	fi
@@ -47,17 +60,27 @@ fi
 	setup_git_configs
 	echo '[setup:git] Done.'
 
-	# Install apps and cli-tools via Homebrew on macOS:
-	if [[ "$(uname -s)" == 'Darwin' ]]; then
+	# Install apps and cli-tools via Homebrew
+
+	if [[ "$machine_type" == 'macOS' ]]; then
 		echo '[install:apps] Start...'
 		source $this_file_dir/functions/setup_homebrew.sh
 		setup_homebrew
 		echo '[install:apps] Done.'
 	fi
 
-	# Setup Ruby env: config files:
+	# Setup Node env
+
+	if [[ "$machine_type" == 'CodeSpaces' ]]; then
+		source "$this_file_dir/functions/setup_nvm.sh"
+		setup_nvm
+	fi
+
+	# Setup Ruby env
+
 	source $this_file_dir/functions/setup_ruby.sh
 	setup_ruby
+
 ) # Subshell end
 
 # NOTE: Suppose Github Codespaces will run this file at first priority.
