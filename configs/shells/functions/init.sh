@@ -25,6 +25,7 @@ function init_asdf {
 			echo "[${FUNCNAME[0]}()] Unknown \$profile: $profile"
 			;;
 	esac
+}
 
 # Initiate nvm for node.
 # $1 {DOTFILES_PROFILE} : As local profile. Required.
