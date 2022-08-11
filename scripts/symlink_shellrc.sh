@@ -8,15 +8,16 @@
 
 function symlink_shellrc {
 	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	local this_repo_dir=$(dirname "$this_file_dir")
 
 	if [[ "$(uname -s)" == 'Darwin' ]]; then
 		echo "[${FUNCNAME[0]}()] Detected macOS."
-		ln -s "$this_file_dir/../examples/macos/.profile" "$HOME/.profile"
-		ln -s "$this_file_dir/../examples/macos/.profile" "$HOME/.bashrc"
+		ln -s "$this_repo_dir/configs/shells/macos.sh" "$HOME/.profile"
+		ln -s "$this_repo_dir/configs/shells/macos.sh" "$HOME/.bashrc"
 	elif [[ "$(uname -s)" == 'Linux' ]]; then
 		echo "[${FUNCNAME[0]}()] Detected Linux."
-		ln -s "$this_file_dir/../examples/linux_mini/.profile" "$HOME/.profile"
-		ln -s "$this_file_dir/../examples/linux_mini/.profile" "$HOME/.bashrc"
+		ln -s "$this_repo_dir/configs/shells/linux_mini.sh" "$HOME/.profile"
+		ln -s "$this_repo_dir/configs/shells/linux_mini.sh" "$HOME/.bashrc"
 	fi
 
 	echo "[${FUNCNAME[0]}()] Done."
