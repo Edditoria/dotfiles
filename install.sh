@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
-# Simple Health Check
-# =================
+# Require: User account, machine name and localhost are set.
+# Require: bash, XCode (macOS), git and Homebrew are properly installed.
+# NOTE: Suppose Github Codespaces will run this file at first priority.
 
+# Simple Health Check
+# ===================
+
+echo '[dotfiles:install] Start...'
 # Do what Homebrew does:
 if [ -z "${BASH_VERSION:-}" ]; then
 	echo '[dotfiles:install] Require Bash to run this script.'
@@ -71,16 +76,20 @@ fi
 
 	# Setup Node env
 
+	echo '[setup:node] Start...'
 	if [[ "$machine_type" == 'CodeSpaces' ]]; then
 		source "$this_file_dir/functions/setup_nvm.sh"
 		setup_nvm
 	fi
+	echo '[setup:node] Done.'
 
 	# Setup Ruby env
 
+	echo '[setup:ruby] Start...'
 	source $this_file_dir/functions/setup_ruby.sh
 	setup_ruby
+	echo '[setup:ruby] Done.'
 
 ) # Subshell end
 
-# NOTE: Suppose Github Codespaces will run this file at first priority.
+echo '[dotfiles:install] Done.'

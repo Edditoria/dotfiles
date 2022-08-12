@@ -1,4 +1,4 @@
-# Requires: $DOTFILES and $DEV
+# Require: $DOTFILES and $DEV
 
 # Override the defaults
 

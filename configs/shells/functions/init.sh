@@ -1,5 +1,8 @@
+# Definition:
+# {DOTFILES_PROFILE} Either {'macOS'|'Linux'|'Linux_mini'|'CodeSpaces'}.
+
 # Initiate asdf (includes node, python, etc.).
-# $1 {DOTFILES_PROFILE} : As local profile. Required.
+# $1 {DOTFILES_PROFILE} As local profile.
 function init_asdf {
 	local profile=$1
 	case "$profile" in
@@ -28,7 +31,7 @@ function init_asdf {
 }
 
 # Initiate nvm for node.
-# $1 {DOTFILES_PROFILE} : As local profile. Required.
+# $1 {DOTFILES_PROFILE} As local profile.
 function init_nvm {
 	local profile=$1
 	case "$1" in
@@ -62,7 +65,7 @@ function init_nvm {
 }
 
 # Initiate rbenv for ruby.
-# $1 {DOTFILES_PROFILE} : As local profile. Required.
+# $1 {DOTFILES_PROFILE} As local profile.
 function init_rbenv {
 	local profile=$1
 	case "$profile" in
@@ -83,7 +86,7 @@ function init_rbenv {
 }
 
 # Initiate pyenv for python.
-# $1 {DOTFILES_PROFILE} : As local profile. Required.
+# $1 {DOTFILES_PROFILE} As local profile.
 function init_pyenv {
 	local profile=$1
 	case "$profile" in

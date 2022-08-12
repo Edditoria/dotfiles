@@ -4,8 +4,8 @@
 # Then add to profile list in Terminal.
 # Credit: https://github.com/ymendel/dotfiles/blob/master/osx/terminal.defaults
 #
-# $1 : Filename of the Terminal setting, e.g. 'WWDC16_Dark_Customized'.
-# $2 : `true` to set the profile as default.
+# $1 {String} Filename of the Terminal setting, e.g. 'WWDC16_Dark_Customized'.
+# $2 {Boolean} Optional. `true` to set the profile as default.
 function setup_macos_terminal {
 	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
 	local profile_name="${1%.terminal}"
