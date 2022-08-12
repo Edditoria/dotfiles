@@ -1,6 +1,5 @@
 export DEV="$HOME/dev"
 export DOTFILES="$DEV/dotfiles"
-export DOTFILES_PROFILE='Linux_mini'
 # export XDG_CONFIG_HOME="$HOME/.config"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
@@ -20,10 +19,10 @@ fi
 # NOTE: No need to set GOPATH and GOROOT since go1.8
 
 source "$DOTFILES/configs/shells/functions/init.sh"
-init_asdf "$DOTFILES_PROFILE"
-# init_nvm "$DOTFILES_PROFILE"
-init_rbenv "$DOTFILES_PROFILE"
-# init_pyenv "$DOTFILES_PROFILE"
+init_asdf 'Linux_mini'
+# init_nvm 'Linux_mini'
+init_rbenv 'Linux_mini'
+# init_pyenv 'Linux_mini'
 
 source "$DOTFILES/configs/shells/functions/alias.sh"
 source "$DOTFILES/configs/shells/functions/prompt_style.sh"
