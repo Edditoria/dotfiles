@@ -65,6 +65,13 @@ fi
 	setup_git_configs
 	echo '[setup:git] Done.'
 
+	# Setup shells: bash
+
+	echo '[setup:shells] Start...'
+	source "$this_file_dir/functions/setup_shells.sh"
+	setup_shells $dotfiles_profile
+	echo '[setup:shells] Done.'
+
 	# Install apps and cli-tools via Homebrew
 
 	if [[ "$dotfiles_profile" == 'macOS' ]]; then
