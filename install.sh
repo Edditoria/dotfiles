@@ -81,6 +81,14 @@ fi
 		echo '[install:apps] Done.'
 	fi
 
+	# Setup asdf
+	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
+		echo '[setup:asdf] Start...'
+		source $this_file_dir/functions/setup_asdf.sh
+		setup_asdf $dotfiles_profile
+		echo '[setup:asdf] Done.'
+	fi
+
 	# Setup Node env
 
 	echo '[setup:node] Start...'
