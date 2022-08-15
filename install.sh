@@ -41,13 +41,13 @@ fi
 
 ( # Subshell start
 	this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
-	machine_type='not_supported'
+	dotfiles_profile='not_supported'
 	if [[ "$CODESPACES" == true ]]; then
-		machine_type='CodeSpaces'
+		dotfiles_profile='CodeSpaces'
 	elif [[ "$(uname -s)" == 'Darwin' ]]; then
-		machine_type='macOS'
+		dotfiles_profile='macOS'
 	elif [[ "$(uname -s)" == 'Linux' ]]; then
-		machine_type='Linux'
+		dotfiles_profile='Linux'
 	else
 		echo "[dotfiles:install] Machine type not supported: $(uname -s)"
 		return 1 2> /dev/null || exit 1
@@ -57,7 +57,7 @@ fi
 
 	echo '[setup:git] Start...'
 	# CodeSpaces already set user in `--system`.
-	if [[ "$machine_type" != 'CodeSpaces' ]]; then
+	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
 		source $this_file_dir/functions/setup_git_user.sh
 		setup_git_user
 	fi
@@ -67,7 +67,7 @@ fi
 
 	# Install apps and cli-tools via Homebrew
 
-	if [[ "$machine_type" == 'macOS' ]]; then
+	if [[ "$dotfiles_profile" == 'macOS' ]]; then
 		echo '[install:apps] Start...'
 		source $this_file_dir/functions/setup_homebrew.sh
 		setup_homebrew
@@ -77,7 +77,7 @@ fi
 	# Setup Node env
 
 	echo '[setup:node] Start...'
-	if [[ "$machine_type" == 'CodeSpaces' ]]; then
+	if [[ "$dotfiles_profile" == 'CodeSpaces' ]]; then
 		source "$this_file_dir/functions/setup_nvm.sh"
 		setup_nvm
 	fi
