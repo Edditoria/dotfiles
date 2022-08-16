@@ -11,7 +11,8 @@ function setup_asdf {
 	local this_repo_dir=$(dirname "$this_file_dir")
 
 	# Symlink: Apply to all profiles.
-	ln -s "$this_repo_dir/configs/asdf/.asdfrc" "$HOME/.asdfrc"
+	# ln -s "$this_repo_dir/configs/asdf/.asdfrc" "$HOME/.asdfrc"
+	# NOTE: Path is set in shell $ASDF_CONFIG_FILE
 
 	case "$profile" in
 		'macOS')
