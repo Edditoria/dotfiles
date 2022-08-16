@@ -14,11 +14,13 @@ function setup_nvm {
 
 	ln -s "$this_repo_dir/configs/node/.default-npm-packages" "$NVM_DIR/default-packages"
 
+	local eachNode
 	for eachNode in "${node_list[@]}"; do
 		nvm install $eachNode
 		nvm alias default $eachNode
 	done
 
+	local eachAlias
 	for eachAlias in "${alias_list[@]}"; do
 		nvm alias $eachAlias
 	done
