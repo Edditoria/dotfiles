@@ -95,6 +95,11 @@ fi
 	if [[ "$dotfiles_profile" == 'CodeSpaces' ]]; then
 		source "$this_file_dir/functions/setup_nvm.sh"
 		setup_nvm
+	else
+		echo '[setup:node] Setup asdf nodejs...'
+		source $this_file_dir/functions/setup_asdf_nodejs.sh
+		setup_asdf_nodejs
+		echo '[setup:node] Skipped setup_nvm. Please manually run functions/setup_nvm.sh'
 	fi
 	echo '[setup:node] Done.'
 

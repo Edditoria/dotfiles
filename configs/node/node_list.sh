@@ -8,3 +8,4 @@ local alias_list=(
 	'default g'
 	'd default'
 )
+local default_node='lts-gallium'
