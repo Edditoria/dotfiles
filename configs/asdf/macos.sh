@@ -19,5 +19,6 @@ local init_install_list=(
 	'python 2.7'
 	'rust stable'
 )
+# 'nodejs lts-gallium' # and more: Handle by setup_asdf_nodejs.sh
 
 local asdf_updates_disabled=true

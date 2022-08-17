@@ -91,6 +91,10 @@ fi
 
 	# Setup Node env
 
+	# - CodeSpaces: nvm via its own nvc.
+	# - macOS: asdf, somtimes nvm.
+	# - Linux(_mini): asdf, sometimes nvm.
+
 	echo '[setup:node] Start...'
 	if [[ "$dotfiles_profile" == 'CodeSpaces' ]]; then
 		source "$this_file_dir/functions/setup_nvm.sh"

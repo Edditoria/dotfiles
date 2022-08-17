@@ -20,7 +20,7 @@ cask "xquartz"
 # Dev
 
 brew "asdf" # deps: coreutils.
-brew "rbenv"
+brew "rbenv" # deps: ruby-build.
 brew "rbenv-binstubs"
 brew "gcc"
 brew "node" # for old macOS only.
