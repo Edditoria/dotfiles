@@ -6,7 +6,7 @@
 # Make .profile; Symlink .bashrc; Make .bash_profile if need.
 # $1 {DOTFILES_PROFILE} As local profile.
 # Returns error if profile is invalid.
-function setup_dotfiles {
+function setup_shells {
 	local profile=$1
 	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
 	local this_repo_dir=$(dirname "$this_file_dir")
@@ -35,7 +35,7 @@ function setup_dotfiles {
 	printf "\nsource \"${src_path}\"\n" >> $HOME/.bashrc
 
 	if [[ -f "$HOME/.bash_profile" ]]; then
-		printf "\nsource \"${src_path}\"\n" >> $HOME/.bashrc
+		printf "\nsource \"${src_path}\"\n" >> $HOME/.bash_profile
 	fi
 	# If .bash_profile does not exist, do nothing.
 }
