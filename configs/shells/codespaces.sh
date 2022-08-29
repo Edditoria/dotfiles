@@ -7,6 +7,7 @@ export DOTFILES="/workspaces/.codespaces/.persistedshare/dotfiles"
 # asdf is not installed. Get ready only:
 export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
 export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
+export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 
 # CodesSpaces had done for you:
 # export NVM_DIR="$HOME/.nvm"

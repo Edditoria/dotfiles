@@ -4,6 +4,7 @@ export DOTFILES="$DEV/dotfiles"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
 export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
+export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export NVM_DIR="$HOME/.nvm"
 export CHROME_EXECUTABLE='/snap/bin/chromium' # for flutter.
 export PATH="$HOME/.rbenv/bin:$PATH"
