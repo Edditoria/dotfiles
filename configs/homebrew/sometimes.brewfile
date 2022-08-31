@@ -10,12 +10,14 @@ cask_args appdir: "/Applications/Cask"
 
 # Dev
 
+brew "neovim"
 cask "android-file-transfer"
 cask "android-platform-tools"
 cask "android-studio"
 mas "Boop", id: 1518425043
 mas "Jayson", id: 1468691718
 mas "Patterns", id: 429449079
+# brew "vim" # macOS builds-in and leave it as-is.
 
 # Design
 
@@ -40,7 +42,6 @@ cask "discord"
 cask "enjoyable"
 cask "firefox"
 cask "google-drive"
-cask "macvim"
 cask "openemu"
 cask "steam"
 mas "Bear", id: 1091189122
