@@ -5,7 +5,7 @@ function setup_asdf_nodejs {
 	local this_repo_dir=$(dirname "$this_file_dir")
 
 	# local node_list default_node
-	source "$this_repo_dir/configs/node/node_list.sh"
+	source "$this_repo_dir/configs/node/install_lists.sh"
 	local eachNode
 	for eachNode in "${node_list[@]}"; do
 		# Replace '/' with '-'
