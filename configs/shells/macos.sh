@@ -5,7 +5,6 @@ export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
 export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export NVM_DIR="$HOME/.nvm"
-export VIMINIT="source $DOTFILES/configs/vim/.vimrc"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
