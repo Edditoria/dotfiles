@@ -114,6 +114,14 @@ fi
 	setup_ruby
 	echo '[setup:ruby] Done.'
 
+	# Setup Vim
+	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
+		echo '[setup:vim] Start...'
+		source "$this_file_dir/functions/setup_vim.sh"
+		setup_vim
+		echo '[setup:vim] Done.'
+	fi
+
 ) # Subshell end
 
 echo '[dotfiles:install] Done.'
