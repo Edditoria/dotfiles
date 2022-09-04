@@ -1,0 +1,40 @@
+# EditorConfig is a file format and collection of text editor plugins for maintaining consistent coding styles between different editors and IDEs.
+# Website: https://editorconfig.org
+#
+# NOTE: Remember to update .gitattributes for new changes.
+
+root=true
+
+[*]
+charset=utf-8
+# end_of_line=lf # text=auto in .gitattributes
+indent_style=tab
+insert_final_newline=true
+
+# Common
+
+[{*.md,*.json}]
+end_of_line=lf
+
+# Javascript, Typescript, npm
+
+[{*.js,*.mjs,*.cjs,*.jsx,*.ts,*.tsx}]
+end_of_line=lf
+
+[{bower.json,package.json,package-lock.json}]
+indent_style=space
+indent_size=2
+
+# YAML
+
+[{*.yml,*.yaml}]
+indent_style=space
+indent_size=2
+
+# Shell script
+
+[{*.sh,*.zsh,*.fish,*.bash}]
+end_of_line=lf
+
+[{*.bat,*.cmd,*.ps1}]
+end_of_line=crlf
