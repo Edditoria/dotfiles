@@ -11,6 +11,12 @@ charset=utf-8
 indent_style=tab
 insert_final_newline=true
 
+# This Repo
+
+[{configs/micro/bindings.json,configs/micro/settings.json}]
+indent_style=space
+indent_size=4
+
 # Common
 
 [{*.md,*.json}]

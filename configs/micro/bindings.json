@@ -1,0 +1,14 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-g": "FindPrevious",
+    "Alt-j": "lua:joinLines.joinLines",
+    "Alt-k": "lua:joinLines.joinLines,DeleteLine",
+    "Alt-t": "NextTab",
+    "Ctrl-g": "FindNext",
+    "Ctrl-l": "SelectLine",
+    "CtrlBackslash": "command:tree",
+    "CtrlUnderscore": "lua:comment.comment",
+    "F1": "ToggleKeyMenu",
+    "F4": "FindNext",
+    "F5": "FindPrevious"
+}

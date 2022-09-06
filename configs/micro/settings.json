@@ -1,0 +1,14 @@
+{
+    "colorcolumn": 80,
+    "colorscheme": "darcula",
+    "diffgutter": true,
+    "hlsearch": true,
+    "indentchar": "→",
+    "keymenu": true,
+    "scrollbar": true,
+    "softwrap": true,
+    "statusformatr": "$(bind:ToggleKeyMenu): keys",
+    "tabmovement": true,
+    "tabsize": 2,
+    "wordwrap": true
+}
