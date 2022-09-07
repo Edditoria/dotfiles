@@ -114,6 +114,14 @@ fi
 	setup_ruby
 	echo '[setup:ruby] Done.'
 
+	# Setup micro-editor
+	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
+		echo '[setup:micro] Start...'
+		source "$this_file_dir/functions/setup_micro.sh"
+		setup_micro
+		echo '[setup:micro] Done.'
+	fi
+
 	# Setup Vim
 	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
 		echo '[setup:vim] Start...'
