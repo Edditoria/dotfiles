@@ -114,6 +114,14 @@ fi
 	setup_ruby
 	echo '[setup:ruby] Done.'
 
+	# Setup tmux
+	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
+		echo '[setup:tmux] Start...'
+		source "$this_file_dir/functions/setup_tmux.sh"
+		setup_tmux
+		echo '[setup:tmux] Done.'
+	fi
+
 	# Setup micro-editor
 	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
 		echo '[setup:micro] Start...'
