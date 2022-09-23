@@ -9,6 +9,10 @@ export NVM_DIR="$HOME/.nvm"
 export CHROME_EXECUTABLE='/snap/bin/chromium' # for flutter.
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+# Set tab width
+# Credit: https://askubuntu.com/questions/63424/how-to-change-tab-width-in-terminal-in-ubuntu-10-04#comment2204539_251033
+[[ $- == *i* ]] && tabs -2
+
 # Linuxbrew aka Homebrew
 if [[ -f "$HOME/.linuxbrew/bin/brew" ]]; then
 	eval "$($HOME/.linuxbrew/bin/brew shellenv)"

@@ -34,7 +34,7 @@ function init_asdf {
 # $1 {DOTFILES_PROFILE} As local profile.
 function init_nvm {
 	local profile=$1
-	case "$1" in
+	case "$profile" in
 		'macOS')
 			if [[ -s $(brew --prefix nvm)/nvm.sh ]]; then
 				source $(brew --prefix nvm)/nvm.sh

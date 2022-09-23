@@ -8,6 +8,10 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+# Set tab width
+# Credit: https://askubuntu.com/questions/63424/how-to-change-tab-width-in-terminal-in-ubuntu-10-04#comment2204539_251033
+[[ $- == *i* ]] && tabs -2
+
 source "$DOTFILES/configs/shells/functions/init.sh"
 init_asdf 'macOS'
 # init_nvm 'macOS'

@@ -39,6 +39,10 @@ fi
 alias hugo_server='hugo server -D --baseURL=http://$(myip) --bind=0.0.0.0 --port=4000'
 alias flutter_server='flutter run -d web-server --web-hostname 0.0.0.0 --web-port 4000'
 
+# Remind myself
+
+alias random='echo "[@_@]ﾉ shuf -n1 -i 0-100 # range is inclusive."'
+
 # Other things
 
 alias tt="cat $DOTFILES/notes/tt.txt"
