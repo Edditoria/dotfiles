@@ -17,7 +17,6 @@ git config --global alias.last 'log --stat --pretty=fuller HEAD -1'
 # Opinionated configs:
 
 git config --global alias.lazy !lazygit
-git config --global core.editor micro
 git config --global init.defaultbranch main
 
 # Platform specific: #macos
