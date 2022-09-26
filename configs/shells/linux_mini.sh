@@ -14,8 +14,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 [[ $- == *i* ]] && tabs -2
 
 # Linuxbrew aka Homebrew
-if [[ -f "$HOME/.linuxbrew/bin/brew" ]]; then
-	eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 else
 	echo '[x_x] Cannot find Homebrew.'
 fi
