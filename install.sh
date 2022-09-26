@@ -27,7 +27,17 @@ if ! command -v git > /dev/null; then
 	echo '[dotfiles:install] Cannot find git.'
 	return 1 2> /dev/null || exit 1
 fi
-if [[ "$(uname -s)" == 'Darwin' ]]; then
+
+if [[ "$CODESPACES" == true ]]; then
+	echo ''
+	# TODO: More health check...
+elif [[ "$(uname -s)" == 'Darwin' ]]; then
+	if ! command -v brew > /dev/null; then
+		echo '[dotfiles:install] Cannot find Homebrew.'
+		return 1 2> /dev/null || exit 1
+	fi
+	# TODO: More health check...
+elif [[ "$(uname -s)" == 'Linux' ]]; then
 	if ! command -v brew > /dev/null; then
 		echo '[dotfiles:install] Cannot find Homebrew.'
 		return 1 2> /dev/null || exit 1
@@ -74,10 +84,10 @@ fi
 
 	# Install apps and cli-tools via Homebrew
 
-	if [[ "$dotfiles_profile" == 'macOS' ]]; then
+	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
 		echo '[install:apps] Start...'
 		source $this_file_dir/functions/setup_homebrew.sh
-		setup_homebrew
+		setup_homebrew $dotfiles_profile
 		echo '[install:apps] Done.'
 	fi
 
