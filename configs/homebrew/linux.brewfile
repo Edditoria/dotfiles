@@ -1,0 +1,22 @@
+# Brewfile: The Homebrew (Linuxbrew) Bundle for Linux
+
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "gcc"
+brew "git"
+
+brew "editorconfig" # Required by text editor app, e.g. micro.
+brew "luarocks" # Lua package manager, and required by nvim-lsp.
+brew "ripgrep" # `rg` command, and required by nvim-telescope.
+
+brew "bat"
+brew "fzf"
+brew "tldr"
+brew "trash-cli"
+
+brew "lazygit"
+brew "micro"
+brew "midnight-commander" # mc in apt.
+brew "neovim"
+brew "tmux"
