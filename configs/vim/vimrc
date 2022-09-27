@@ -14,6 +14,11 @@ filetype indent on
 
 syntax on
 
+" Prevent write to clipboard:
+noremap x "_x
+noremap X "_X
+noremap <Del> "_x
+
 set mouse=a
 set tabstop=2 " aka the tab width.
 set shiftwidth=2 " width for autoindents.
@@ -47,8 +52,9 @@ set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:» ",eol
 set list " to display special characters.
 set showcmd " to show current key stroke in status line.
 set wildmenu
-" set wildmode=list:longest
-set wildmode=list:full " to make repeated presses cycle.
+set wildmode=longest:list,full " 1st <Tab> for match-list, 2nd <Tab> for wildmenu.
+" set wildmode=list:full " <Tab> for both match-list and wildmenu.
+" set wildoptions=pum,tagfile " WARN: Not working on old Linux distros.
 
 
 " PLUGINS
@@ -69,10 +75,10 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'preservim/nerdcommenter'    " Originally dev by scrooloose
 Plug 'itchyny/lightline.vim'
-" Plug 'folke/which-key.nvim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'liuchengxu/vim-which-key'   " , { 'on': ['WhichKey', 'WhichKey!'] }
-" Plug 'laher/fuzzymenu.vim'        " Depend: fzf.vim
-" Plug 'skywind3000/vim-quickui'   " Menu bar on top
+" Plug 'laher/fuzzymenu.vim'      " Require: fzf.vim
+" Plug 'skywind3000/vim-quickui'  " Menu bar on top
 
 " Colorscheme
 " -----------
