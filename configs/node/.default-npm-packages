@@ -6,17 +6,20 @@
 coffeescript
 eslint
 prettier
+typescript
 
 # Then these:
 
 bower
 coffeelint
+eslint-config-prettier
 # hbs-cli
 # jshint
 marked
 # npm-check
 sass-lint
 stylelint
+typescript-language-server
 
 # NOTE: For asdf and nvm, only add comments in its own line.
 # Ref: `grep` in `filtered_packages` in {asdf_repo}/bin/install
