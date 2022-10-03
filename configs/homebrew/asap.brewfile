@@ -26,6 +26,7 @@ brew "gcc"
 brew "node" # for old macOS only.
 brew "deno"
 brew "supabase/tap/supabase"
+brew "editorconfig" # Required by text editor app, e.g. micro.
 brew "micro" # text editor. Git config had set it.
 brew "lazygit" # Git config had set it.
 cask "sublime-text"

@@ -21,6 +21,7 @@ cask "chromium"
 
 cask "font-dejavu" # VSCode requires it in settings.
 cask "font-sf-mono" # VSCode requires it in settings.
+cask "font-sf-pro"
 cask "visual-studio-code"
 
 cask "firefox-developer-edition" # for testing.
