@@ -56,6 +56,19 @@ set wildmode=longest:list,full " 1st <Tab> for match-list, 2nd <Tab> for wildmen
 " set wildmode=list:full " <Tab> for both match-list and wildmenu.
 " set wildoptions=pum,tagfile " WARN: Not working on old Linux distros.
 
+" Editor Command: Toogle Showing EOL Character:
+let g:is_showing_eol = 0
+function ToggleShowEOL()
+	if g:is_showing_eol
+		let g:is_showing_eol=0
+		setlocal listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:» ",eol:¶
+	else
+		let g:is_showing_eol=1
+		setlocal listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»,eol:¶
+	endif
+endfunction
+command ToggleShowEOL call ToggleShowEOL()
+
 
 " PLUGINS
 " =======
