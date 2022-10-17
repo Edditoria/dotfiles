@@ -18,6 +18,7 @@ brew "tmux"
 cask "android-file-transfer"
 cask "android-platform-tools"
 cask "android-studio"
+cask "rapidapi" # aka Paw.app HTTP and REST API manager.
 mas "Boop", id: 1518425043
 mas "Jayson", id: 1468691718
 mas "Patterns", id: 429449079
