@@ -8,7 +8,7 @@
 function setup_homebrew {
 	local profile=$1
 	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
-	local configs_dir=$this_file_dir/../configs/homebrew
+	local homebrew_configs_dir="$(dirname $this_file_dir)/configs/homebrew"
 
 	case "$profile" in
 		'macOS')
@@ -16,9 +16,9 @@ function setup_homebrew {
 				echo "[${FUNCNAME[0]}()] Cannot find Homebrew."
 				return 1
 			fi
-			brew bundle --file="$configs_dir/asap.brewfile"
-			brew bundle --file="$configs_dir/essentials.brewfile"
-			brew bundle --file="$configs_dir/sometimes.brewfile"
+			brew bundle --file="$homebrew_configs_dir/asap.brewfile"
+			brew bundle --file="$homebrew_configs_dir/essentials.brewfile"
+			brew bundle --file="$homebrew_configs_dir/sometimes.brewfile"
 
 			;;
 		'Linux' | 'Linux_mini')
@@ -26,7 +26,7 @@ function setup_homebrew {
 				echo "[${FUNCNAME[0]}()] Cannot find Homebrew."
 				return 1
 			fi
-			brew bundle --file="$configs_dir/linux.brewfile"
+			brew bundle --file="$homebrew_configs_dir/linux.brewfile"
 			;;
 		'CodeSpaces')
 			echo "[${FUNCNAME[0]}()] Not support $profile currently."

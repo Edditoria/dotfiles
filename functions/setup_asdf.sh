@@ -38,15 +38,15 @@ function setup_asdf {
 	esac
 
 	# Setup plugins
-	local eachPlugin
-	for eachPlugin in "${plugin_list[@]}"; do
-		asdf plugin add $eachPlugin
+	local each_plugin
+	for each_plugin in "${plugin_list[@]}"; do
+		asdf plugin add "$each_plugin"
 	done
 	asdf plugin update --all
 
 	# Install versions
-	local eachInstall
-	for eachInstall in "${init_install_list[@]}"; do
-		asdf install $eachInstall
+	local each_install
+	for each_install in "${init_install_list[@]}"; do
+		asdf install "$each_install"
 	done
 }

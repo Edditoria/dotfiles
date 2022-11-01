@@ -11,7 +11,7 @@ function setup_macos_terminal {
 	local profile_name="${1%.terminal}"
 	local profile_dir="$this_file_dir/../configs/terminal"
 	local profile_file="${1%.terminal}.terminal" # Add extension name if omitted
-	local shouldSetDefault=${2:-false}
+	local should_set_default=${2:-false}
 
 	if  [[ ! "$(uname -s)" == 'Darwin' ]]; then
 		echo "[${FUNCNAME[0]}()] Not macOS :("
@@ -27,7 +27,7 @@ function setup_macos_terminal {
 
 	open "$profile_dir/$profile_file"
 	sleep 2  # to make sure the theme is loaded.
-	if [ "$shouldSetDefault" = true ]; then
+	if [ "$should_set_default" = true ]; then
 		defaults write com.apple.Terminal "Default Window Settings" -string "$profile_name"
 		defaults write com.apple.Terminal "Startup Window Settings" -string "$profile_name"
 	fi

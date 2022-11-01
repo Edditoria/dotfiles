@@ -6,10 +6,10 @@ function setup_asdf_nodejs {
 
 	# local node_list default_node
 	source "$this_repo_dir/configs/node/install_lists.sh"
-	local eachNode
-	for eachNode in "${node_list[@]}"; do
+	local each_node
+	for each_node in "${node_list[@]}"; do
 		# Replace '/' with '-'
-		asdf install nodejs "${eachNode/\//-}"
+		asdf install nodejs "${each_node/\//-}"
 	done
 	# asdf install nodejs lts # already done in setup_asdf.
 	asdf global nodejs $default_node
