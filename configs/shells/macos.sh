@@ -6,6 +6,7 @@ export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packa
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
+export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Set tab width
