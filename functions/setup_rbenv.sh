@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function setup_ruby {
+function setup_rbenv {
 	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
 	local ruby_configs_dir="$(dirname $this_file_dir)/configs/ruby"
 

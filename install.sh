@@ -124,8 +124,8 @@ fi
 	setup_ruby
 	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
 		source $this_file_dir/functions/setup_rbenv.sh
+		setup_rbenv
 	fi
-	setup_rbenv
 	echo '[setup:ruby] Done.'
 
 	# Setup tmux
