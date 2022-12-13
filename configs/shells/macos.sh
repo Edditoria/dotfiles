@@ -18,7 +18,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 source "$DOTFILES/configs/shells/functions/init.sh"
 init_asdf 'macOS'
 # init_nvm 'macOS'
-init_rbenv 'macOS'
+init_chruby 'macOS'
 # init_pyenv 'macOS'
 
 source "$DOTFILES/configs/shells/functions/alias.sh"

@@ -7,7 +7,6 @@ export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packa
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export NVM_DIR="$HOME/.nvm"
 export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
-export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Set tab width
 # Credit: https://askubuntu.com/questions/63424/how-to-change-tab-width-in-terminal-in-ubuntu-10-04#comment2204539_251033
@@ -27,7 +26,7 @@ fi
 source "$DOTFILES/configs/shells/functions/init.sh"
 init_asdf 'Linux_mini'
 # init_nvm 'Linux_mini'
-init_rbenv 'Linux_mini'
+init_chruby 'Linux_mini'
 # init_pyenv 'Linux_mini'
 
 source "$DOTFILES/configs/shells/functions/alias.sh"

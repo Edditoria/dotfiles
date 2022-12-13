@@ -64,6 +64,27 @@ function init_nvm {
 	esac
 }
 
+# Initiate chruby for ruby.
+# $1 {DOTFILES_PROFILE} As local profile.
+function init_chruby {
+	local profile=$1
+	case "$profile" in
+		'macOS' | 'Linux' | 'Linux_mini')
+			if [[ -s $(brew --prefix chruby)/share/chruby/chruby.sh ]]; then
+				source $(brew --prefix chruby)/share/chruby/chruby.sh
+				source $(brew --prefix chruby)/share/chruby/auto.sh
+			else
+				echo "[${FUNCNAME[0]}()] Cannot find chruby.sh file."
+			fi
+			;;
+		'CodeSpaces')
+			echo "[${FUNCNAME[0]}()] Codespaces has rbenv ready. Please use rbenv instead."
+			;;
+		*)
+			echo "[${FUNCNAME[0]}()] Unknown \$profile: $profile"
+	esac
+}
+
 # Initiate rbenv for ruby.
 # $1 {DOTFILES_PROFILE} As local profile.
 function init_rbenv {

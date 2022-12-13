@@ -10,6 +10,7 @@ cask_args appdir: "/Applications/Cask"
 
 # System
 
+brew "gcc"
 brew "mas"
 brew "git"
 brew "git-lfs"
@@ -20,10 +21,9 @@ cask "xquartz"
 # Dev
 
 brew "asdf" # deps: coreutils.
-brew "rbenv" # deps: ruby-build.
-brew "rbenv-binstubs"
-brew "gcc"
 brew "node" # for old macOS only.
+brew "ruby-install" # Required by chruby.
+brew "chruby"
 brew "deno"
 brew "supabase/tap/supabase"
 brew "editorconfig" # Required by text editor app, e.g. micro.
