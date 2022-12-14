@@ -10,7 +10,6 @@ cask_args appdir: "/Applications/Cask"
 
 # Dev
 
-brew "cocoapods" # for Swift and Objective-C Cocoa projects.
 brew "jq" # command-line JSON processor.
 brew "kotlin"
 brew "nvm" # Not use it daily, but for test sometimes.

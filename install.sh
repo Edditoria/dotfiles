@@ -123,8 +123,8 @@ fi
 	source $this_file_dir/functions/setup_ruby.sh
 	setup_ruby
 	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
-		source $this_file_dir/functions/setup_rbenv.sh
-		setup_rbenv
+		source $this_file_dir/functions/setup_chruby.sh
+		setup_chruby
 	fi
 	echo '[setup:ruby] Done.'
 
