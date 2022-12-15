@@ -1,6 +1,6 @@
 # Implement in functions/setup_chruby and functions/setup_rbenv
 local ruby_list=(
-	'2.7.6'
+	# '2.7.6'
 	'3.1.2'
 )
 
