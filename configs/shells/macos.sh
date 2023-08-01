@@ -1,5 +1,6 @@
 export DEV="$HOME/dev"
 export DOTFILES="$DEV/dotfiles"
+export DISABLE_DEVICONS=false # for Neovim config.
 
 export LANG=en_US.UTF-8 # to fix missing symbol characters in tmux.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
