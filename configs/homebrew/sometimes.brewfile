@@ -12,6 +12,7 @@ cask_args appdir: "/Applications/Cask"
 # Dev
 
 brew "bat"
+brew "fd"
 brew "luarocks" # Lua package manager, and required by nvim-lsp.
 brew "neovim"
 brew "ripgrep" # `rg` command, and required by nvim-telescope.

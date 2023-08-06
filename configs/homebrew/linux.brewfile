@@ -13,6 +13,7 @@ brew "luarocks" # Lua package manager, and required by nvim-lsp.
 brew "ripgrep" # `rg` command, and required by nvim-telescope.
 
 brew "bat"
+brew "fd"
 brew "fzf"
 brew "tldr"
 brew "trash-cli"
