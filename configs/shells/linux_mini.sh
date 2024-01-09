@@ -7,7 +7,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
 export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
-export NVM_DIR="$HOME/.nvm"
 export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 
 # Set tab width
@@ -27,8 +26,11 @@ fi
 
 source "$DOTFILES/configs/shells/functions/init.sh"
 init_asdf 'Linux_mini'
-# init_nvm 'Linux_mini'
 init_chruby 'Linux_mini'
+
+# Not use anymore:
+# export NVM_DIR="$HOME/.nvm"
+# init_nvm 'Linux_mini'
 # init_pyenv 'Linux_mini'
 
 source "$DOTFILES/configs/shells/functions/alias.sh"
