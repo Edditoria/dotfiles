@@ -17,6 +17,9 @@ source "$DOTFILES/configs/shells/functions/init.sh"
 init_asdf 'macOS'
 init_chruby 'macOS'
 
+# Fix path not found in VSCode
+export FLUTTER_ROOT="$(asdf where flutter)"
+
 # Not use anymore:
 # export NVM_DIR="$HOME/.nvm"
 # init_nvm 'macOS'
