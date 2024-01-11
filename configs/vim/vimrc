@@ -60,10 +60,10 @@ set wildmode=longest:list,full " 1st <Tab> for match-list, 2nd <Tab> for wildmen
 let g:is_showing_eol = 0
 function ToggleShowEOL()
 	if g:is_showing_eol
-		let g:is_showing_eol=0
+		let g:is_showing_eol = 0
 		setlocal listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:» ",eol:¶
 	else
-		let g:is_showing_eol=1
+		let g:is_showing_eol = 1
 		setlocal listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»,eol:¶
 	endif
 endfunction
@@ -177,9 +177,9 @@ xnoremap <silent> <LocalLeader>    :<c-u>WhichKeyVisual ','<CR>
 set background=dark
 " set background=light
 
-let g:onedark_termcolors=256
-let g:solarized_termcolors=256
-" let g:solarized_termtrans=0
+let g:onedark_termcolors = 256
+let g:solarized_termcolors = 256
+" let g:solarized_termtrans = 0
 let g:lightline = {
 	\ 'colorscheme': 'onedark',
 	\ }
