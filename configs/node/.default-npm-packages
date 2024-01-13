@@ -14,12 +14,12 @@ bower
 coffeelint
 eslint-config-prettier
 # hbs-cli
-# jshint
 marked
-# npm-check
 sass-lint
 stylelint
+vscode-langservers-extracted
 typescript-language-server
+svelte-language-server
 
 # NOTE: For asdf and nvm, only add comments in its own line.
 # Ref: `grep` in `filtered_packages` in {asdf_repo}/bin/install
