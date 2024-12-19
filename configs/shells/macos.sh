@@ -2,6 +2,7 @@ export DEV="$HOME/dev"
 export DOTFILES="$DEV/dotfiles"
 export DISABLE_DEVICONS=false # for Neovim config.
 
+export PATH="/usr/local/sbin:$PATH" # as instructed by `brew doctor`.
 export LANG=en_US.UTF-8 # to fix missing symbol characters in tmux.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
