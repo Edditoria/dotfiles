@@ -140,7 +140,7 @@ let g:which_key_map.c = { 'name': '+NERDCommenter' }
 let g:which_key_map_visual.c = { 'name': '+NERDCommenter' }
 let g:which_key_map.h = { 'name': '+GitGutter' }
 let g:which_key_map_visual.h = { 'name': '+GitGutter' }
-let g:which_key_map['<Space>'] = {
+let g:which_key_map[' '] = {
 	\ 'name': 'Note 1',
 	\ 'u':   ['', 'undo'],
 	\ 'C-r': ['', 'redo'],
@@ -155,7 +155,7 @@ let g:which_key_map['<Space>'] = {
 	\ 'N':   ['', 'search previous'],
 	\ '*':   ['', 'search current word'],
 	\ }
-let g:which_key_map_visual['<Space>'] = {
+let g:which_key_map_visual[' '] = {
 	\ 'name': 'Note 1',
 	\ 'iw': ['', 'select word'],
 	\ 'd':  ['', 'del select'],
