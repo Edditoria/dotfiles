@@ -1,0 +1,3 @@
+// Default Golang packages to be installed by ASDF
+
+golang.org/x/tools/gopls@latest // Go language server.

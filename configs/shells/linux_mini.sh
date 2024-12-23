@@ -9,6 +9,7 @@ export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packa
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY="latest_installed"
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+export ASDF_GOLANG_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default-golang-pkgs"
 export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 
 # Set tab width
