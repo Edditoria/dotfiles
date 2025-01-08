@@ -23,7 +23,7 @@ cask "font-sf-mono" # VSCode requires it in settings.
 cask "font-sf-pro"
 cask "visual-studio-code"
 
-cask "firefox-developer-edition" # for testing.
+cask "firefox@developer-edition" # browser for testing.
 cask "textmate"
 # cask "godot" # is installed via Steam.
 

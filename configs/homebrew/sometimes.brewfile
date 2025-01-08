@@ -38,7 +38,6 @@ mas "Tonality", id: 892581529
 
 # Others
 
-brew "exifcleaner" # for privacy.
 brew "exiftool" # for file metadata, e.g. `exiftool -all:all`.
 brew "ncdu" # for disk usage.
 brew "poppler" # for PDF files. Commands: pdfinfo, pdfsig, pdffonts, etc.
@@ -47,7 +46,8 @@ cask "cakebrew"
 cask "cheatsheet"
 cask "discord"
 cask "enjoyable"
-cask "firefox"
+cask "exifcleaner" # for privacy.
+cask "firefox" # browser
 cask "google-drive"
 cask "openemu"
 cask "steam"
