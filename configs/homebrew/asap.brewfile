@@ -5,7 +5,6 @@
 # tap "homebrew/cask" # as instructed by `brew doctor`.
 tap "homebrew/cask-fonts"
 tap "supabase/tap"
-tap "epk/epk"
 
 cask_args appdir: "/Applications/Cask"
 
@@ -48,10 +47,8 @@ mas "Affinity Photo", id: 824183456
 
 cask "dropbox" # Too many files I need in daily workflows.
 cask "utm"
-mas "1Password 7", id: 1333542190
 mas "Better", id: 1121192229
 mas "Bitwarden", id: 1352778147
-mas "LastPass", id: 926036361
 mas "Numbers", id: 409203825
 mas "PopClip", id: 445189367
 mas "Surfshark", id: 1437809329

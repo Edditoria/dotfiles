@@ -4,7 +4,6 @@
 
 tap "homebrew/cask-fonts"
 tap "supabase/tap"
-tap "epk/epk"
 
 cask_args appdir: "/Applications/Cask"
 
@@ -19,7 +18,6 @@ brew "tmux"
 cask "android-file-transfer"
 cask "android-platform-tools"
 cask "android-studio"
-cask "epk/epk/font-sf-mono-nerd-font"
 cask "rapidapi" # aka Paw.app HTTP and REST API manager.
 mas "Boop", id: 1518425043
 mas "Jayson", id: 1468691718

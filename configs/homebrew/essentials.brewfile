@@ -4,7 +4,6 @@
 
 tap "homebrew/cask-fonts"
 tap "supabase/tap"
-tap "epk/epk"
 
 cask_args appdir: "/Applications/Cask"
 
