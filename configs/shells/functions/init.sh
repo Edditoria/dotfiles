@@ -1,6 +1,15 @@
 # Definition:
 # {DOTFILES_PROFILE} Either {'macOS'|'Linux'|'Linux_mini'|'CodeSpaces'}.
 
+# Initiate fzf
+function init_fzf {
+	if command -v fzf >/dev/null; then
+		eval "$(fzf --bash)"
+	else
+		echo '[x_x] Cannot find fzf.'
+	fi
+}
+
 # Initiate asdf (includes node, python, etc.).
 # $1 {DOTFILES_PROFILE} As local profile.
 function init_asdf {

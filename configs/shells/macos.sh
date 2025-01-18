@@ -18,6 +18,7 @@ export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 [[ $- == *i* ]] && tabs -2
 
 source "$DOTFILES/configs/shells/functions/init.sh"
+init_fzf
 init_asdf 'macOS'
 init_chruby 'macOS'
 

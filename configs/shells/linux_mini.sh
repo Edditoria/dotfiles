@@ -28,6 +28,7 @@ fi
 # NOTE: No need to set GOPATH and GOROOT since go1.8
 
 source "$DOTFILES/configs/shells/functions/init.sh"
+init_fzf
 init_asdf 'Linux_mini'
 init_chruby 'Linux_mini'
 
