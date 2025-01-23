@@ -8,7 +8,7 @@ local plugin_list=(
 local init_install_list=(
 	'deno latest'
 	'golang latest'
-	'nodejs lts'
+	'nodejs latest'
 )
 
 local asdf_updates_disabled=false

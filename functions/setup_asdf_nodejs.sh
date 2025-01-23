@@ -8,11 +8,10 @@ function setup_asdf_nodejs {
 	source "$this_repo_dir/configs/node/install_lists.sh"
 	local each_node
 	for each_node in "${node_list[@]}"; do
-		# Replace '/' with '-'
-		asdf install nodejs "${each_node/\//-}"
+		asdf install nodejs $(asdf nodejs resolve $each_node --latest-available)
 	done
 	# asdf install nodejs lts # already done in setup_asdf.
-	asdf global nodejs $default_node
+	asdf global nodejs $(asdf nodejs resolve $default_node --latest-installed)
 }
 
 # NOTE: No need to symlink .default-npm-packages file because the path is set in shells `$ASDF_NPM_DEFAULT_PACKAGES_FILE`.
