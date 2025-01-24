@@ -11,16 +11,18 @@ typescript
 # Then these:
 
 bower
-coffeelint
+@coffeelint/cli
 eslint-config-prettier
 # hbs-cli
 marked
-sass-lint
 stylelint
+
+# And language servers:
+
 vscode-langservers-extracted
 typescript-language-server
 svelte-language-server
 
 # NOTE: For asdf and nvm, only add comments in its own line.
 # Ref: `grep` in `filtered_packages` in {asdf_repo}/bin/install
-# Ref: `nvm_get_default_packages()` in nvm_repo}/nvm.sh
+# Ref: `nvm_get_default_packages()` in {nvm_repo}/nvm.sh
