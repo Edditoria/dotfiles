@@ -6,6 +6,8 @@ local plugin_list=(
 	'nodejs'
 	'python'
 	'rust'
+	'shellcheck'
+	'shfmt'
 )
 
 # NOTE: init_install_list !== .tool-versions
@@ -17,6 +19,8 @@ local init_install_list=(
 	'python 3.10'
 	'python 2.7'
 	'rust stable'
+	'shellcheck latest'
+	'shfmt latest'
 )
 # 'nodejs lts' # Instead, handle by setup_asdf_nodejs.sh
 
