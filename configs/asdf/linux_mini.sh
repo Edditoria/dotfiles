@@ -1,6 +1,7 @@
 local plugin_list=(
 	'deno'
 	'golang'
+	'hugo https://github.com/Edditoria/asdf-hugo.git'
 	'nodejs'
 	'shellcheck'
 	'shfmt'
@@ -10,6 +11,7 @@ local plugin_list=(
 local init_install_list=(
 	'deno latest'
 	'golang latest'
+	'hugo latest:extended'
 	'nodejs latest'
 	'shellcheck latest'
 	'shfmt latest'
