@@ -45,6 +45,4 @@ alias random='echo "[@_@]ﾉ shuf -n1 -i 0-100 # range is inclusive."'
 
 # Other things
 
-alias tt="cat $DOTFILES/notes/tt.txt"
-alias gg="cat $DOTFILES/notes/gg.txt"
 alias ducks='du -cks * | sort -rn | head -15' # have fun!
