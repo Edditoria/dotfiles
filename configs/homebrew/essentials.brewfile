@@ -34,7 +34,7 @@ cask "imageoptim"
 
 # Others
 
-brew "tldr"
+brew "tlrc" # `tldr` command.
 brew "trash"
 cask "airtable"
 cask "appcleaner"

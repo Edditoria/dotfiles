@@ -7,6 +7,7 @@ brew "gcc"
 brew "git"
 brew "ruby-install" # Required by chruby.
 brew "chruby"
+# brew "asdf" # is installed manually in ~/apps/asdf directory.
 
 brew "editorconfig" # Required by text editor app, e.g. micro.
 brew "luarocks" # Lua package manager, and required by nvim-lsp.
@@ -15,7 +16,9 @@ brew "ripgrep" # `rg` command, and required by nvim-telescope.
 brew "bat"
 brew "fd"
 brew "fzf"
-brew "tldr"
+brew "jq" # command-line JSON processor.
+brew "ncdu" # for disk usage.
+brew "tlrc" # `tldr` command.
 brew "trash-cli"
 
 brew "lazygit"
