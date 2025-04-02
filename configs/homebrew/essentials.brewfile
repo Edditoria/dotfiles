@@ -2,7 +2,6 @@
 
 # "Essentials" means that I need these apps/cli for daily works, but not that urgent after I reinstall OS.
 
-tap "homebrew/cask-fonts"
 tap "supabase/tap"
 
 cask_args appdir: "/Applications/Cask"

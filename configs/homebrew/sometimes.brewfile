@@ -2,7 +2,6 @@
 
 # "Sometimes" means that I could installed these apps/cli anytime.
 
-tap "homebrew/cask-fonts"
 tap "supabase/tap"
 
 cask_args appdir: "/Applications/Cask"

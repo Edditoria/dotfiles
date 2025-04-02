@@ -2,9 +2,9 @@
 
 # "ASAP" means that these apps/cli should be installed as soon as possible for a fresh-installed OS.
 
-# tap "homebrew/cask" # as instructed by `brew doctor`.
-tap "homebrew/cask-fonts"
 tap "supabase/tap"
+# tap "homebrew/cask" # deprecated.
+# tap "homebrew/cask-fonts" # deprecated.
 
 cask_args appdir: "/Applications/Cask"
 

@@ -1,7 +1,7 @@
 # Brewfile: The Homebrew (Linuxbrew) Bundle for Linux
 
-tap "homebrew/bundle"
-# tap "homebrew/core" # as instructed by `brew doctor`.
+# tap "homebrew/bundle" # deprecated.
+# tap "homebrew/core" # no longer necessary.
 
 brew "gcc"
 brew "git"
