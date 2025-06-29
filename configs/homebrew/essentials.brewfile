@@ -10,7 +10,6 @@ cask_args appdir: "/Applications/Cask"
 
 brew "jq" # command-line JSON processor.
 brew "kotlin"
-# brew "nvm" # Not use it daily, but for test sometimes.
 
 cask "font-noto-sans-cjk" # for browsers.
 cask "font-noto-serif-cjk" # for browsers.

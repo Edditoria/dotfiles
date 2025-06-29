@@ -19,8 +19,9 @@ export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 
 source "$DOTFILES/configs/shells/functions/init.sh"
 init_fzf
-init_asdf 'macOS'
-init_chruby 'macOS'
+init_mise
+# init_asdf 'macOS'
+# init_chruby 'macOS'
 
 # Fix path not found in VSCode
 export FLUTTER_ROOT="$(asdf where flutter)"

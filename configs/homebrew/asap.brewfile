@@ -20,10 +20,9 @@ cask "xquartz"
 
 # Dev
 
-brew "asdf" # deps: coreutils.
-brew "node" # for old macOS only.
-brew "ruby-install" # Required by chruby.
-brew "chruby"
+brew "mise" # version manager.
+# brew "asdf" # version manager for testing sometimes.
+# brew "nvm" # for testing sometimes.
 brew "deno"
 brew "supabase/tap/supabase"
 brew "editorconfig" # Required by text editor app, e.g. micro.
@@ -34,8 +33,6 @@ cask "fork"
 cask "docker"
 mas "Xcode", id: 497799835
 mas "TestFlight", id: 899247664
-# brew "node-build" # asdf nodejs has its own node-build.
-# brew "pyenv" # asdf python has its own python-build.
 
 # Design
 

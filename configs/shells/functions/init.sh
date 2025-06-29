@@ -10,6 +10,15 @@ function init_fzf {
 	fi
 }
 
+# Initiate mise.
+function init_mise {
+	if command -v mise >/dev/null; then
+		eval "$(mise activate bash)"
+	else
+		echo '[x_x] Cannot find mise.'
+	fi
+}
+
 # Initiate asdf (includes node, python, etc.).
 # $1 {DOTFILES_PROFILE} As local profile.
 function init_asdf {

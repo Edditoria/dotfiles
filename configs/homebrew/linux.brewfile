@@ -5,9 +5,8 @@
 
 brew "gcc"
 brew "git"
-brew "ruby-install" # Required by chruby.
-brew "chruby"
-# brew "asdf" # is installed manually in ~/apps/asdf directory.
+brew "mise" # version manager.
+# brew "asdf" # version manager for testing sometimes.
 
 brew "editorconfig" # Required by text editor app, e.g. micro.
 brew "luarocks" # Lua package manager, and required by nvim-lsp.

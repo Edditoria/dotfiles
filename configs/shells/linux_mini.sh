@@ -29,8 +29,9 @@ fi
 
 source "$DOTFILES/configs/shells/functions/init.sh"
 init_fzf
-init_asdf 'Linux_mini'
-init_chruby 'Linux_mini'
+init_mise
+# init_asdf 'Linux_mini'
+# init_chruby 'Linux_mini'
 
 # Not use anymore:
 # export NVM_DIR="$HOME/.nvm"
