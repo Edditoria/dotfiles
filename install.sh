@@ -91,12 +91,13 @@ fi
 		echo '[install:apps] Done.'
 	fi
 
-	# Setup asdf
+	# Setup mise
+
 	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
-		echo '[setup:asdf] Start...'
-		source $this_file_dir/functions/setup_asdf.sh
-		setup_asdf $dotfiles_profile
-		echo '[setup:asdf] Done.'
+		echo '[setup:mise] Start...'
+		source $this_file_dir/functions/setup_mise.sh
+		setup_mise $dotfiles_profile
+		echo '[setup:mise] Done.'
 	fi
 
 	# Setup Node env

@@ -1,0 +1,14 @@
+[settings]
+idiomatic_version_file_enable_tools = ["elixir", "go", "node", "python", "ruby", "yarn"]
+
+[tools]
+deno = "2"
+firebase = "14"
+flutter = "3"
+go = "1"
+node = ["lts"]
+python = ["3"]
+ruby = ["3.4"]
+rust = "1"
+shellcheck = "0.10"
+shfmt = "3.11"
