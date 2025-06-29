@@ -1,4 +1,4 @@
-# Implement in functions/setup_asdf_nodejs and functions/setup_nvm
+# Implement in functions/setup_nvm
 local node_list=(
 	'lts/iron'
 	'lts/jod'
@@ -11,6 +11,3 @@ local alias_list=(
 	'default j'
 	'd default'
 )
-
-# Implement in functions/setup_asdf_nodejs
-local default_node='lts/jod'

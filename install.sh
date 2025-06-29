@@ -102,15 +102,12 @@ fi
 
 	# Setup Node env
 
-	echo '[setup:node] Start...'
 	if [[ "$dotfiles_profile" == 'CodeSpaces' ]]; then
+		echo '[setup:node] Start...'
 		source "$this_file_dir/functions/setup_nvm.sh"
 		setup_nvm
-	else
-		source "$this_file_dir/functions/setup_asdf_nodejs.sh"
-		setup_asdf_nodejs
+		echo '[setup:node] Done.'
 	fi
-	echo '[setup:node] Done.'
 
 	# Setup Ruby env
 
