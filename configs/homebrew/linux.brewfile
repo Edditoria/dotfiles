@@ -5,6 +5,7 @@
 
 brew "gcc"
 brew "git"
+brew "ruby-build" # for less headache to mise use ruby.
 brew "mise" # version manager.
 # brew "asdf" # version manager for testing sometimes.
 
