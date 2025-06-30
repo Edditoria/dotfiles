@@ -115,8 +115,8 @@ fi
 	source $this_file_dir/functions/setup_ruby.sh
 	setup_ruby
 	if [[ "$dotfiles_profile" != 'CodeSpaces' ]]; then
-		source $this_file_dir/functions/setup_chruby.sh
-		setup_chruby
+		source $this_file_dir/functions/update_ruby_gems.sh
+		update_ruby_gems
 	fi
 	echo '[setup:ruby] Done.'
 
