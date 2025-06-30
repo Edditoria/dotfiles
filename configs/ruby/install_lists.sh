@@ -9,5 +9,4 @@ local default_ruby='3.1.2'
 
 local gem_list=(
 	'bundler'
-	'cocoapods'
 )
