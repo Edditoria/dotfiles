@@ -6,6 +6,6 @@ deno = "2"
 go = "1"
 node = ["lts"]
 python = ["3"]
-ruby = ["3.4"]
+ruby = "system"
 shellcheck = "0.10"
 shfmt = "3.11"

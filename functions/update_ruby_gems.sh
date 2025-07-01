@@ -2,6 +2,10 @@
 
 function update_ruby_gems {
 	gem update --system
-	gem update bundler
+	if command -v bundle > /dev/null; then
+		gem update bunder
+	else
+		gem install bundler
+	fi
 	gem cleanup
 }

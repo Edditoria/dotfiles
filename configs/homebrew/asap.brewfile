@@ -20,6 +20,7 @@ cask "xquartz"
 
 # Dev
 
+brew "ruby" # TODO: Deal with mise ruby later.
 brew "ruby-build" # for less headache to mise use ruby.
 brew "mise" # version manager.
 # brew "asdf" # version manager for testing sometimes.
