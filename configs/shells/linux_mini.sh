@@ -5,7 +5,7 @@ export DISABLE_DEVICONS=false # for Neovim config.
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 
-export MISE_GO_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default-golang-pkgs"
+export MISE_GO_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default_golang_packages.conf"
 export MISE_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export MISE_NODE_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
 export MISE_RUBY_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/ruby/default_gems.conf"
@@ -15,7 +15,7 @@ export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packa
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY="latest_installed"
 export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-export ASDF_GOLANG_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default-golang-pkgs"
+export ASDF_GOLANG_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default_golang_packages.asdf.rc"
 
 export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 
