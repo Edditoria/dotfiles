@@ -25,13 +25,13 @@ export CHROME_EXECUTABLE="$(which chrome || which chromium)" # for flutter.
 [[ $- == *i* ]] && tabs -2
 
 source "$DOTFILES/configs/shells/functions/init.sh"
+source "$DOTFILES/configs/shells/functions/set.sh"
+
 init_fzf
 init_mise
 # init_asdf 'macOS'
 # init_chruby 'macOS'
-
-# Fix path not found in VSCode
-export FLUTTER_ROOT="$(asdf where flutter)"
+set_flutter
 
 # Not use anymore:
 # export NVM_DIR="$HOME/.nvm"
