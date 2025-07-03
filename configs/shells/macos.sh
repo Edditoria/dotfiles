@@ -26,7 +26,6 @@ source "$DOTFILES/configs/shells/functions/set.sh"
 init_fzf
 init_mise
 # init_asdf 'macOS'
-# init_chruby 'macOS'
 set_flutter
 
 # Not use anymore:
