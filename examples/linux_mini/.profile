@@ -6,6 +6,6 @@ export DOTFILES="$HOME/dev/dotfiles"
 # But you can write your own and source what you like:
 
 source "$DOTFILES/configs/shells/functions/init.sh"
-init_asdf 'Linux_mini' # and etc.
+init_mise 'Linux_mini' # and etc.
 source "$DOTFILES/configs/shells/functions/alias.sh"
 source "$DOTFILES/configs/shells/functions/prompt_style.sh"
