@@ -9,23 +9,25 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
 # My Setup
 
-- Current OS: macOS High Sierra 10.13.3
+- Main machine: macOS:
+	- All kinds of dev, design and productivities.
+- Remote dev machines: Ubuntu Server LTS:
+	- A bunch of cheap servers for coding and prototyping.
 - Dev dir: `~/dev`
 - Dotfiles dir: `~/dev/dotfiles`
 - App/package managers:
   - Mac AppStore for apps
   - `brew cask` for more apps
   - `brew` for cli tools
-  - `nvm` to manage `node` and `npm`
-  - `rbenv` and `bundler` to manage `ruby`
-  - `pyenv` and `pip` to manage `python`
-- Cask apps in customized directory: `/Applications/Cask`
-- `nvm alias default` is `dubnium` (neither `stable` nor `lts/dubnium`)
-- Keep `rdoc` and `ri` for `gem install`, but not keep for `gem update`
+  - `mise` for tool version management, e.g. Node, Python, etc.
+- Small details:
+  - Cask apps in customized directory: `/Applications/Cask`
+  - For Ruby projects, I generally use `bundler`.
+  - For Ruby gems, I disabled documentation generation no matter install and update.
 
 # Useful Commands
 
-- `. backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt, etc.
+- ~~`. backup.sh` to backup a list to brew_leaves.txt, brew_cask_list.txt and app_list.txt, etc.~~
 
 ---
 
@@ -64,16 +66,8 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 
    ```shell
    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   brew doctor # may need to fix some problems
-   brew update
-   ```
-
-1. Install Caskroom:
-
-   ```shell
    export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
-   brew tap caskroom/cask
-   brew tap caskroom/fonts
+   brew doctor # may need to fix some problems
    brew update
    ```
 
@@ -90,12 +84,11 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
    cd $dotfiles_dir && git remote -v && ls
    ```
 
-1. Initial install dotfiles:
+1. Initial install script:
 
    ```shell
    cd ~/dev/dotfiles
-   source setup_dotfiles.sh
-   source ~/.bash_profile
+   source install.sh
    ```
 
 1. Initial config Git and GitLab:
@@ -110,91 +103,10 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
    > - Copy SSH key to clipboard: `pbcopy < ~/.ssh/id_rsa.pub`
    > - Paste the key to this URL: <https://gitlab.com/profile/keys>
 
-## Install Brew Formulae and Cask Apps
-
-1. Install homebrew formulae and cask apps:
-
-   ```shell
-   source setup_homebrew.sh
-   ```
-
-1. Check your brew leaves and cask apps:
-
-   ```shell
-   brew leaves
-   brew cask list
-   ```
-
-1. Config cask apps, especially Evernote.
-
-## Javascript Dev Env
-
-1. Install npm using nvm, and install packages for each npm:
-
-   ```shell
-   source ~/.bash_profile
-   nvm --version # check
-   cd $DOTFILES && source setup_nvm.sh
-   ```
-
-1. Do some checking:
-
-   ```shell
-   nvm ls # check
-   node -v # check
-   node $DOTFILES/test/test_node.js # open browser to see Hello World
-   ```
-
-1. Install Meteor.js :
-
-   ```shell
-   curl https://install.meteor.com/ | sh
-   ```
-
-## Ruby Dev Env
-
-1. Check current Ruby environment:
-
-   ```shell
-   exec $SHELL -l # restart shell as a login shell
-   rbenv -v
-   which ruby-build # /Users/Edditoria/.rbenv/shims/gem
-   ```
-
-1. Install Ruby versions:
-
-   ```shell
-   cd $DOTFILES && source setup_rbenv.sh
-   gem install nokogirl # troubleshoot if problem exists
-   gem install rails
-   rails -v # better to check manually
-   ```
-
-> _note:_
-> In my experience, Rails installation failed every single time.
-> Different error may occur in the different version of rails in different MacOS.
-> Sorry that you may need to investigate the error by yourself.
-
-> _extra note:_
-> You still need to `be {command}` (alias of `bundle exec`) and `rbenv rehash` manually.
-
-## Python Dev Env
-
-1. Check the current Python environment:
-
-   ```shell
-   exec $SHELL -l # restart shell as a login shell
-   pyenv -v
-   ```
-
-1. Install Python versions:
-
-   ```shell
-   cd $DOTFILES && source setup_pyenv.sh
-   ```
-
 ## Other Things
 
+- ~~Config cask apps, especially Evernote.~~
+- For Ruby projects, you still need to `be {command}` (alias of `bundle exec`).
 - Setup symlink to `~/dev`
 
   ```shell
@@ -207,9 +119,8 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
   source setup_terminal.sh
   ```
 
-- Manually setup npm packages, login items according to backup files.
-- Manually install apps that are not in caskroom nor Apple AppStore:
-  - PushBullet.app (fade out by official)
+- Manually verify login items according to backup files.
+- Manually install apps that are not in caskroom nor Apple AppStore. In my case:
   - Tuxera NTFS (bundled in Toshiba external hard drive)
 - Manually config notification center.
 - Check Accessibility in Security & Privacy.
