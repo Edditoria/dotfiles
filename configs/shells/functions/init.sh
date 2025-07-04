@@ -90,27 +90,6 @@ function init_nvm {
 	esac
 }
 
-# Initiate rbenv for ruby.
-# $1 {DOTFILES_PROFILE} As local profile.
-function init_rbenv {
-	local profile=$1
-	case "$profile" in
-		'macOS' | 'Linux' | 'Linux_mini')
-			if which rbenv > /dev/null; then
-				eval "$(rbenv init -)"
-			else
-				echo "[${FUNCNAME[0]}()] Cannot find rbenv."
-			fi
-			;;
-		'CodeSpaces')
-			echo "[${FUNCNAME[0]}()] CodesSpaces had already done it for you."
-			;;
-		*)
-			echo "[${FUNCNAME[0]}()] Unknown \$profile: $profile"
-			;;
-	esac
-}
-
 # Initiate pyenv for python.
 # $1 {DOTFILES_PROFILE} As local profile.
 function init_pyenv {
