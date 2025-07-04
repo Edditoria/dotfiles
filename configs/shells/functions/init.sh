@@ -89,24 +89,3 @@ function init_nvm {
 			;;
 	esac
 }
-
-# Initiate pyenv for python.
-# $1 {DOTFILES_PROFILE} As local profile.
-function init_pyenv {
-	local profile=$1
-	case "$profile" in
-		'macOS' | 'Linux' | 'Linux_mini')
-			if which pyenv > /dev/null; then
-				eval "$(pyenv init -)"
-			else
-				echo '[x_x] Cannot find pyenv.'
-			fi
-			;;
-		'CodeSpaces')
-			echo "[${FUNCNAME[0]}()] CodesSpaces had in its own way to run Python."
-			;;
-		*)
-			echo "[${FUNCNAME[0]}()] Unknown \$profile: $profile"
-			;;
-	esac
-}

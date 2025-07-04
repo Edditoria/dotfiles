@@ -41,7 +41,6 @@ set_flutter
 # Not use anymore:
 # export NVM_DIR="$HOME/.nvm"
 # init_nvm 'Linux_mini'
-# init_pyenv 'Linux_mini'
 
 source "$DOTFILES/configs/shells/functions/alias.sh"
 source "$DOTFILES/configs/shells/functions/prompt_style.sh"

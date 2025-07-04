@@ -31,9 +31,6 @@ set_flutter
 # Not use anymore:
 # export NVM_DIR="$HOME/.nvm"
 # init_nvm 'macOS'
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# init_pyenv 'macOS'
 
 source "$DOTFILES/configs/shells/functions/alias.sh"
 source "$DOTFILES/configs/shells/functions/prompt_style.sh"
