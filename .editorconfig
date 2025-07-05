@@ -15,6 +15,7 @@ insert_final_newline = true
 
 # Files are updated by Micro Editor automatically:
 [configs/micro/{bindings.json,settings.json}]
+end_of_line = lf
 indent_style = space
 indent_size = 4
 
@@ -22,19 +23,11 @@ indent_size = 4
 
 [*.md]
 end_of_line = lf
+indent_style = space
+indent_size = 2
 
 [*.{json,jsonc,json5}]
 end_of_line = lf
-
-# Javascript, Typescript, npm
-
-[*.{js,mjs,cjs,jsx,ts,tsx}]
-end_of_line = lf
-
-[{bower.json,package.json,package-lock.json}]
-end_of_line = lf
-indent_style = space
-indent_size = 2
 
 # YAML
 

@@ -10,9 +10,9 @@ A "dotfiles" approach can help you set up a new machine much faster and more imp
 # My Setup
 
 - Main machine: macOS:
-	- All kinds of dev, design and productivities.
+  - All kinds of dev, design and productivities.
 - Remote dev machines: Ubuntu Server LTS:
-	- A bunch of cheap servers for coding and prototyping.
+  - A bunch of cheap servers for coding and prototyping.
 - Dev dir: `~/dev`
 - Dotfiles dir: `~/dev/dotfiles`
 - App/package managers:
