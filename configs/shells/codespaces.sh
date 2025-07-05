@@ -11,8 +11,10 @@ export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/asdfrc"
 # export NVM_DIR="$HOME/.nvm"
 
 # source "$DOTFILES/configs/shells/functions/init.sh"
-
+source "$DOTFILES/configs/shells/functions/set.sh"
 source "$DOTFILES/configs/shells/functions/alias.sh"
 
-# Default is fine:)
-# source "$DOTFILES/configs/shells/functions/prompt_style.sh"
+alias_lazy && alias_quick && alias_yell && alias_override
+
+# Default is fine :)
+# set_prompt_style

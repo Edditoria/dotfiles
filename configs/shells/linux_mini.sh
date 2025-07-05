@@ -32,15 +32,15 @@ fi
 
 source "$DOTFILES/configs/shells/functions/init.sh"
 source "$DOTFILES/configs/shells/functions/set.sh"
+source "$DOTFILES/configs/shells/functions/alias.sh"
 
 init_fzf
 init_mise
 # init_asdf 'Linux_mini'
 set_flutter
+alias_lazy && alias_quick && alias_yell && alias_override
+set_prompt_style
 
 # Not use anymore:
 # export NVM_DIR="$HOME/.nvm"
 # init_nvm 'Linux_mini'
-
-source "$DOTFILES/configs/shells/functions/alias.sh"
-source "$DOTFILES/configs/shells/functions/prompt_style.sh"
