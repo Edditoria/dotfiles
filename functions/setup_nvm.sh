@@ -12,7 +12,7 @@ function setup_nvm {
 	# local node_list alias_list
 	source "$this_repo_dir/configs/node/install_lists.sh"
 
-	ln -s "$this_repo_dir/configs/node/.default-npm-packages" "$NVM_DIR/default-packages"
+	ln -s "$this_repo_dir/configs/node/default_npm_packages.conf" "$NVM_DIR/default-packages"
 
 	local each_node
 	for each_node in "${node_list[@]}"; do

@@ -24,10 +24,10 @@ function init_mise {
 function init_asdf {
 	local profile=$1
 
-	export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
-	export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/.default-npm-packages"
+	export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/asdfrc"
+	export ASDF_NPM_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/default_npm_packages.conf"
 	export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY="latest_installed"
-	export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/.default-python-packages"
+	export ASDF_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/default_python_packages.conf"
 	export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 	export ASDF_GOLANG_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default_golang_packages.asdf.rc"
 

@@ -5,7 +5,7 @@ export DOTFILES="/workspaces/.codespaces/.persistedshare/dotfiles"
 # export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 
 # Keep for plugin development only:
-export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/.asdfrc"
+export ASDF_CONFIG_FILE="$DOTFILES/configs/asdf/asdfrc"
 
 # CodesSpaces had done for you:
 # export NVM_DIR="$HOME/.nvm"
