@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function setup_tmux {
-	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 	local this_repo_dir=$(dirname "$this_file_dir")
 
 	mkdir -p "$HOME/.config/tmux"

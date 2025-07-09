@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function setup_git_configs {
-	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 	local configs_file=$this_file_dir/../configs/git/configure_git_now.sh
 
 	if [ ! -r "$configs_file" ]; then

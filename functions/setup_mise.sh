@@ -7,7 +7,7 @@
 # Returns error if profile is invalid.
 function setup_mise {
 	local profile=$1
-	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 	local this_repo_dir=$(dirname "$this_file_dir")
 
 	local plugin_script_file=$this_repo_dir/configs/mise/install_plugins_now.sh

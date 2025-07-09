@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function setup_nvm {
-	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 	local this_repo_dir=$(dirname "$this_file_dir")
 
 	if [ -z "${NVM_DIR:-}" ]; then

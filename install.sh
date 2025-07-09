@@ -50,7 +50,7 @@ fi
 # ====================
 
 ( # Subshell start
-	this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 	dotfiles_profile='not_supported'
 	if [[ "$CODESPACES" == true ]]; then
 		dotfiles_profile='CodeSpaces'

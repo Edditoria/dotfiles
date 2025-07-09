@@ -11,8 +11,7 @@ set -e
 
 hline="-------"
 
-# get current dir
-dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+dotfiles_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 backup_dir="${dotfiles_dir}/backup"
 
 # backup procedure starts

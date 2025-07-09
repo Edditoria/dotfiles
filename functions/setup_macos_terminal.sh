@@ -7,7 +7,7 @@
 # $1 {String} Filename of the Terminal setting, e.g. 'WWDC16_Dark_Customized'.
 # $2 {Boolean} Optional. `true` to set the profile as default.
 function setup_macos_terminal {
-	local this_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
+	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
 	local profile_name="${1%.terminal}"
 	local profile_dir="$this_file_dir/../configs/terminal"
 	local profile_file="${1%.terminal}.terminal" # Add extension name if omitted
