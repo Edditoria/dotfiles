@@ -10,8 +10,8 @@ function setup_git_user {
 	fi
 
 	echo "Please tell me your username and email for git:"
-	read -p "user.name: " username
-	read -p "user.email: " email
+	read -p -r "user.name: " username
+	read -p -r "user.email: " email
 	git config --global user.name "${username}"
 	git config --global user.email "${email}"
 }

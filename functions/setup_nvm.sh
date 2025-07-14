@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 function setup_nvm {
-	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
-	local this_repo_dir=$(dirname "$this_file_dir")
+	local this_file_dir
+	this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
+	local this_repo_dir
+	this_repo_dir=$(dirname "$this_file_dir")
 
 	if [ -z "${NVM_DIR:-}" ]; then
 		echo "[${FUNCNAME[0]}()] \$NVM_DIR not set."

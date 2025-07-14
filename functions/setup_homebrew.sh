@@ -7,8 +7,10 @@
 # Returns error if profile is invalid.
 function setup_homebrew {
 	local profile=$1
-	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
-	local homebrew_configs_dir="$(dirname $this_file_dir)/configs/homebrew"
+	local this_file_dir
+	this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
+	local homebrew_configs_dir
+	homebrew_configs_dir="$(dirname "$this_file_dir")/configs/homebrew"
 
 	case "$profile" in
 		'macOS')

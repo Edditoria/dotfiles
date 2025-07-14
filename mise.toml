@@ -1,0 +1,7 @@
+[tools]
+shellcheck = "0.10"
+shfmt = "3.11"
+
+[tasks."lint:install"]
+description = "Lint install.sh file"
+run = "shellcheck -xa {{config_root}}/install.sh"

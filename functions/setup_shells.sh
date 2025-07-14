@@ -8,24 +8,26 @@
 # Returns error if profile is invalid.
 function setup_shells {
 	local profile=$1
-	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
-	local this_repo_dir=$(dirname "$this_file_dir")
+	local this_file_dir
+	this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
+	local this_repo_dir
+	this_repo_dir=$(dirname "$this_file_dir")
 
 	# Set local src_path; Edit .profile:
 	case "$profile" in
 		'macOS')
 			local src_path="$this_repo_dir/configs/shells/macos.sh"
-			touch $HOME/.profile
-			printf "\nsource \"${src_path}\"\n" >> $HOME/.profile
+			touch "$HOME/.profile"
+			printf "\nsource \"%s\"\n" "$src_path" >> "$HOME/.profile"
 			;;
 		'Linux' | 'Linux_mini')
 			local src_path="$this_repo_dir/configs/shells/linux_mini.sh"
-			printf "\n[[ ! \"\$BASH_VERSION\" ]] && source \"${src_path}\"\n" >> $HOME/.profile
+			printf "\n[[ ! \"\$BASH_VERSION\" ]] && source \"%s\"\n" "$src_path" >> "$HOME/.profile"
 			# NOTE: .profile is already sourcing .bash_profile file.
 			;;
 		'CodeSpaces')
 			local src_path="$this_repo_dir/configs/shells/codespaces.sh"
-			printf "\n[[ ! \"\$BASH_VERSION\" ]] && source \"${src_path}\"\n" >> $HOME/.profile
+			printf "\n[[ ! \"\$BASH_VERSION\" ]] && source \"%s\"\n" "$src_path" >> "$HOME/.profile"
 			# NOTE: .profile is already sourcing .bash_profile file.
 			;;
 		*)
@@ -36,8 +38,8 @@ function setup_shells {
 
 	# Apply to all profiles:
 
-	touch $HOME/.bashrc
-	printf "\nsource \"${src_path}\"\n" >> $HOME/.bashrc
+	touch "$HOME/.bashrc"
+	printf "\nsource \"%s\"\n" "$src_path" >> "$HOME/.bashrc"
 
 	if [[ -f "$HOME/.bash_profile" ]]; then
 		echo "[${FUNCNAME[0]}()] .bash_profile exists but you need to manually edit it, if necessary."

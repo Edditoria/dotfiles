@@ -7,8 +7,10 @@
 # Returns error if profile is invalid.
 function setup_mise {
 	local profile=$1
-	local this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
-	local this_repo_dir=$(dirname "$this_file_dir")
+	local this_file_dir
+	this_file_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)
+	local this_repo_dir
+	this_repo_dir=$(dirname "$this_file_dir")
 
 	local plugin_script_file=$this_repo_dir/configs/mise/install_plugins_now.sh
 	local config_src
@@ -28,6 +30,7 @@ function setup_mise {
 		return 1
 	fi
 
+	# shellcheck source=./configs/mise/install_plugins_now.sh
 	source "$plugin_script_file"
 
 	# Copy config file
