@@ -6,6 +6,9 @@ export PATH="/usr/local/sbin:$PATH" # as instructed by `brew doctor`.
 export LANG=en_US.UTF-8 # to fix missing symbol characters in tmux.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 
+export BAT_CONFIG_PATH="$DOTFILES/configs/bat/bat.conf"
+export BAT_CONFIG_DIR="$DOTFILES/configs/bat"
+
 export MISE_GO_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default_golang_packages.conf"
 export MISE_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/default_python_packages.conf"
 export MISE_NODE_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/default_npm_packages.conf"

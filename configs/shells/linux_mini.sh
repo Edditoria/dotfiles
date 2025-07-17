@@ -5,6 +5,9 @@ export DISABLE_DEVICONS=false # for Neovim config.
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications/Cask"
 
+export BAT_CONFIG_PATH="$DOTFILES/configs/bat/bat.conf"
+export BAT_CONFIG_DIR="$DOTFILES/configs/bat"
+
 export MISE_GO_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/golang/default_golang_packages.conf"
 export MISE_PYTHON_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/python/default_python_packages.conf"
 export MISE_NODE_DEFAULT_PACKAGES_FILE="$DOTFILES/configs/node/default_npm_packages.conf"
