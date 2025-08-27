@@ -1,0 +1,11 @@
+{
+	"name": "Tmux Syntax",
+	"details": "https://github.com/Edditoria/tmux-sublime",
+	"labels": ["language syntax"],
+	"releases": [
+		{
+			"sublime_text": ">=3000",
+			"tags": true
+		}
+	]
+}
