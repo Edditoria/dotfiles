@@ -1,0 +1,353 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Tmux conf
+file_extensions:
+  - tmux.conf
+  - .tmux.conf
+scope: source.tmux
+
+# MARK:--
+
+contexts:
+  main:
+    # MARK: control flow
+
+    - match: '(^%|\s%)(if|elif|else|endif)\b'
+      scope: keyword.control.conditional.tmux
+
+    # MARK: Tmux cmd
+
+    - match: \b({{invalid__var}})\b
+      scope: invalid.deprecated.tmux
+    - match: \b(bind|unbind)(-key)?\b
+      scope: support.function.tmux
+    - include: set_cmd__ctx
+    - include: select_cmd__ctx
+    - match: \b({{cmd__var}})\b
+      scope: support.function.tmux
+
+    - match: \s-[a-zA-Z]+
+      scope: variable.parameter.option.tmux
+    - match: \bon\b
+      scope: constant.language.boolean.true.tmux
+    - match: \boff\b
+      scope: constant.language.boolean.false.tmux
+    - match: \b({{hook_name__var}})\b
+      scope: constant.language.hook-name.tmux
+
+    # MARK: str
+
+    - match: "'"
+      scope: punctuation.definition.string.begin.tmux
+      push:
+        - meta_scope: string.quoted.double.tmux
+        - match: "'"
+          scope: punctuation.definition.string.end.tmux
+          pop: true
+        - match: \\$
+          scope: punctuation.separator.continuation.line.tmux
+
+    - match: '"'
+      scope: punctuation.definition.string.begin.tmux
+      push:
+        - meta_scope: string.quoted.double.tmux
+        - match: '"'
+          scope: punctuation.definition.string.end.tmux
+          pop: true
+        - include: esc_char__ctx
+        - include: style_expan__ctx
+        - match: (#)({{fmt_alias__var}})(?![a-zA-Z_0-9])
+          captures:
+            1: punctuation.definition.variable.tmux
+            2: variable.other.readwrite.tmux
+        - match: (#)({)
+          captures:
+            1: punctuation.definition.variable.tmux
+            2: punctuation.section.expansion.parameter.begin.tmux
+          push: fmt__ctx
+        - match: (\$)({{shell_chars__var}})
+          captures:
+            1: punctuation.definition.variable.shell
+            2: variable.other.readwrite.shell
+        - match: (\$)({)
+          captures:
+            1: punctuation.definition.variable.shell
+            2: punctuation.section.expansion.parameter.begin.shell
+          push:
+            - match: \\\}
+              scope: constant.character.escape.shell
+            - match: \}
+              scope: punctuation.section.expansion.parameter.end.shell
+              pop: true
+            - match: \\\$
+              scope: constant.character.escape.shell
+            - match: "{{shell_chars__var}}"
+              scope: variable.other.readwrite.shell
+        - match: \\$
+          scope: punctuation.separator.continuation.tmux
+
+    # MARK: num, optr, cmt
+
+    - match: '\s[\+\-]\d+\b'
+      scope: constant.numeric.tmux
+    - match: \b\d+\b
+      scope: constant.numeric.tmux
+
+    - match: =
+      scope: keyword.operator.assignment.option.tmux
+
+    - include: esc_char__ctx
+
+    - match: ^\s*(#.*)$
+      scope: comment.line.number-sign.tmux
+    - match: \s#.*
+      scope: comment.line.number-sign.tmux
+
+  # MARK:- cmd ctx
+
+  set_cmd__ctx:
+    - match: \b(set(-buffer|-environment|-hook|-mark|b|env))\b
+      scope: support.function.tmux
+    - match: \b(setw|set-window-option)\b
+      scope: support.function.tmux
+    - match: \b(set(-option)?)(?!-)\b
+      scope: support.function.tmux
+    - match: \b({{pane_opt__var}}|{{session_opt__var}}|{{window_opt__var}}|{{server_opt__var}})\b
+      scope: constant.language.tmux-option.tmux
+
+  select_cmd__ctx:
+    - match: \b(select(-layout|l))\b
+      scope: support.function.tmux
+    - match: \b({{layout_name__var}})\b
+      # scope: variable.parameter.select-layout.tmux
+      # scope: variable.other.constant.select-layout.tmux
+      scope: constant.language.select-layout.tmux
+
+  # MARK: more ctx
+
+  fmt__ctx:
+    # https://man.openbsd.org/OpenBSD-current/man1/tmux.1#FORMATS
+    - meta_scope: meta.group.expansion.parameter.tmux
+    - match: \\}
+      scope: constant.character.escape.tmux
+    - match: \}
+      scope: punctuation.section.expansion.parameter.end.tmux
+      pop: true
+    - match: \b({{fmt_name__var}})\b
+      # fmt_alias__var matches before "($)({)"
+      scope: variable.other.readwrite.tmux
+    - include: style_expan__ctx
+    - match: (#)({)
+      captures:
+        1: punctuation.definition.variable.tmux
+        2: punctuation.section.expansion.parameter.begin.tmux
+      push: fmt__ctx
+    # - match: \S
+    #   scope: variable.other.readwrite.tmux
+
+  style_expan__ctx:
+    - match: (#)(\[)
+      captures:
+        1: punctuation.definition.variable.tmux
+        2: punctuation.section.expansion.parameter.begin.tmux
+      push:
+        - match: \]
+          scope: punctuation.section.expansion.parameter.end.tmux
+          pop: true
+        - include: style_assign__ctx
+
+  style_assign__ctx:
+    - match: \b(fg|bg)(=)
+      captures:
+        2: keyword.operator.assignment.option.tmux
+
+  esc_char__ctx:
+    - match: \\.
+      scope: constant.character.escape.tmux
+
+# MARK:- cmd vars
+
+variables:
+  shell_chars__var: "[a-zA-Z_][a-zA-Z_0-9]*"
+  cmd__var: "\
+    {{prior_cmd__var}}|{{misc_cmd__var}}|{{window_pane_cmd__var}}|\
+    {{client_session_cmd__var}}|{{key_cmd__var}}|{{buffer_cmd__var}}|\
+    {{copy_mode_cmd__var}}|{{status_cmd__var}}"
+  prior_cmd__var: "\
+    copy-mode|\
+    display(-menu|-message|-popup|-panes|p)?|\
+    ls(b|cm|c|k|p|w)?|\
+    lock(-client|-server|-session|c|s)?|\
+    new(-window|-session|w)?|\
+    next-(layout|matching-bracket|paragraph|prompt|space(-end)?|word(-end)?|window)|\
+    next(l)?|\
+    refresh(-client|-from-pane)?|\
+    rename(-window|-session|w)?|\
+    show-(buffer|environment|hook|messages|options|prompt-history)|\
+    show(b|env|msgs|phist)?|\
+    source(-file)?|\
+    start(-of-line|-server)?|\
+    switch(-client|c)"
+  # Ref: Manual page: Clients And Sessions
+  client_session_cmd__var: "\
+    attach(-session)?|detach(-client)?|has(-session)?|kill-(server|session)|\
+    list-(clients|commands|sessions)|server-access|suspend(-client|c)"
+  # Ref: Manual page: Windows And Panes: copy-mode
+  # > The following commands are supported in copy mode.
+  copy_mode_cmd__var: "\
+    append-selection(-and-cancel)?|back-to-indentation|begin-selection|\
+    bottom-line|cancel|clear-selection|\
+    copy-(\
+    (end-of-line(-and-cancel)?)|(line(-and-cancel)?)|\
+    (pipe-end-of-line(-and-cancel)?)|\
+    (pipe-line(-and-cancel)?)|\
+    (pipe(-no-clear|-and-cancel)?)|\
+    (selection(-no-clear|-and-cancel)?)\
+    )|\
+    cursor-((down(-and-cancel)?)|left|right|up)|\
+    end-of-line|goto-line|\
+    halfpage-(down(-and-cancel)?|up|bottom|top)|\
+    history-(bottom|top)|\
+    jump-(again|backward|forward|reverse|to-(backward|forward|mark))|\
+    middle-line|other-end|page-(down(-and-cancel)?|up)|\
+    pipe(-no-clear|-and-cancel)?|\
+    previous-(matching-bracket|paragraph|prompt|word|space)|\
+    rectangle-(on|off|toggle)|\
+    scroll-(bottom|down(-and-cancel)?|middle|top|up)|\
+    search-(again|backward(-incremental|-text)?|forward(-incremental|-text)?|reverse)|\
+    select-(line|word)|stop-selection|toggle-position|top-line"
+  # Ref: Manual page: Windows And Panes
+  # https://man.openbsd.org/OpenBSD-current/man1/tmux.1#break-pane
+  window_pane_cmd__var: "\
+    break(-pane|p)|capture(-pane|p)|choose-(client|tree)|customize-mode|\
+    find(-window|w)|join(-pane|p)|kill(-pane|p|-window|w)|\
+    last(-pane|p|-window)?|link(-window|w)|list-(panes|windows)|\
+    move(-pane|p|-window|w)|pipe(-pane|p)|prev(ious-(layout|window)|l)?|\
+    resize(-pane|p|-window|w)|respawn(-pane|p|-window|w)|rotate(-window|w)|\
+    select(-pane|p|-window|w)|split(-window|w)|\
+    swap(-pane|p|-window|w)|unlink(-window|w)"
+  # Ref: Manual page: Key Bindings
+  key_cmd__var: "list-keys|send(-keys|-prefix)?"
+  # Ref: Manual page: Status Line
+  status_cmd__var: "\
+    clear(-prompt-history|phist)|command-prompt|confirm(-before)?|menu|popup"
+  # Ref: Manual page: Buffers
+  buffer_cmd__var: "\
+    choose-buffer|clear(-history|hist)|delete(-buffer|b)|list-buffers|\
+    load(-buffer|b)|paste(-buffer|b)|save(-buffer|b)"
+  # Ref: Manual page: Miscellaneous
+  misc_cmd__var: "clock-mode|if(-shell)?|run(-shell)?|wait(-for)?"
+
+  # MARK: opt vars
+
+  # Ref: Manual page: Options
+  # > Available server options are:
+  server_opt__var: "\
+    backspace|buffer-limit|command-alias|codepoint-widths|copy-command|\
+    default-client-command|default-terminal|escape-time|editor|\
+    exit-(empty|unattached)|extended-keys(-format)?|focus-events|history-file|\
+    input-buffer-size|message-limit|prompt-history-limit|set-clipboard|\
+    terminal-(features|overrides)|user-keys|variation-selector-always-wide"
+  # Ref: Manual page: Options
+  # > Available session options are:
+  session_opt__var: "\
+    activity-action|assume-paste-time|base-index|bell-action|\
+    default-(command|shell|size)|destroy-unattached|detach-on-destroy|\
+    display-(panes-(active-colour|colour|time)|time)|\
+    history-limit|initial-repeat-time|key-table|lock-(after-time|command)|\
+    menu-(style|selected-style|border-(style|lines))|\
+    message-(command-style|line|style)|mouse|prefix(2|-timeout)?|\
+    prompt-cursor-(colour|style)|renumber-windows|repeat-time|\
+    set-titles(-string)?|silence-action|\
+    status-(position|format|interval|justify|keys|style)|\
+    status(-left(-length|-style)?|-right(-length|-style)?)?|\
+    update-environment|visual-(activity|bell|silence)|word-separators"
+  # Ref: Manual page: Options
+  # Available window options are:
+  window_opt__var: "\
+    aggressive-resize|automatic-rename(-format)?|clock-mode-(colour|style)|\
+    fill-character|main-pane-(height|width)|\
+    copy-mode-((current-match|match|mark|selection)-style|position-(format|style))|\
+    mode-(keys|style)|monitor-(activity|bell|silence)|\
+    other-pane-(height|width)|\
+    pane-(active-border-style|base-index)|\
+    pane-border-(format|indicators|lines|status|style)|\
+    pane-scrollbars(-style|-position)?|\
+    popup-(style|border-(style|lines))|\
+    window-status-((activity-|bell-|last-)?style|current-(format|style)|format|separator)|\
+    window-size|wrap-search"
+  # Ref: Manual page: Options
+  # Available pane options are:
+  pane_opt__var: "\
+    allow-(passthrough|rename|set-title)|alternate-screen|\
+    cursor-(colour|style)|pane-colours|remain-on-exit(-format)?|\
+    scroll-on-clear|synchronize-panes|window-(active-)?style"
+
+  # MARK: fmt vars
+
+  # Ref: Manual page: Formats
+  fmt_alias__var: H|h|D|P|T|S|F|I|W
+  # Ref: Manual page: Formats
+  fmt_name__var: "\
+    active_window_index|alternate_(on|saved_(x|y))|\
+    buffer_(created|name|sample|size)|\
+    client_(activity|cell_(height|width)|control_mode|created|discarded|flags)|\
+    client_(height|key_table|last_session|name|pid|prefix|readonly|session)|\
+    client_(term(features|name|type)|tty|uid|user|utf8|width|written)|\
+    command(_list_(alias|name|usage))?|config_files|cursor_blinking|\
+    copy_cursor_(hyperlink|line|word|x|y)|current_file|\
+    cursor_(character|colour|flag|shape|very_visible|x|y)|\
+    history_(bytes|limit|size)|\
+    hook_(client|pane|session(_name)?|window(_name)?)|hook|\
+    host(_short)?|insert_flag|keypad_(cursor_)?flag|\
+    last_(session|window)_index|line|loop_last_flag|\
+    mouse_((all|any|button|sgr|standard|utf8)_flag|hyperlink|line)|\
+    mouse_(status_(line|range)|word|x|y)|\
+    next_session_id|origin_flag|\
+    pane_(active|at_(bottom|left|right|top)|bg|bottom|current_(command|path))|\
+    pane_(dead(_signal|_status|_time)?|fg|format|height|id|in_mode|index)|\
+    pane_(input_off|key_mode|last|left|marked(_set)?|mode|path|pid|pipe|right)|\
+    pane_(search_string|start_(command|path)|synchronized|tabs|title|top|tty)|\
+    pane_(unseen_changes|width)|\
+    pid|rectangle_toggle|scroll_(position|region_(lower|upper))|\
+    search_(count(_partial)?|match|present)|\
+    selection_(active|end_(x|y)|present|start_(x|y))|\
+    server_sessions|\
+    session_(active|activity(_flag)?|alerts|attached(_list)?|bell_flag)|\
+    session_(created|format)|\
+    session_group(_attached(_list)?|_list|_many_attached|_size|ed)?|\
+    session_(id|index|last_attached|many_attached|marked|name|path)|\
+    session_(silence_flag|stack|windows)|\
+    socket_path|sixel_support|start_time|uid|user|version|\
+    window_active(_clients(_list)?|_sessions(_list)?)?|\
+    window_(activity(_flag)?|bell_flag|cell_(height|width)|end_flag)|\
+    window_(flags|format|height|id|index|last_flag|layout)|\
+    window_(linked(_sessions(_list)?)?|marked_flag|name|offset_(x|y)|panes)|\
+    window_(raw_flags|silence_flag|stack_index|start_flag|visible_layout)|\
+    window_(width|zoomed_flag)|\
+    wrap_flag"
+
+  # MARK: other vars
+
+  # Layout-name for select-layout command.
+  # > The following layouts are supported:
+  layout_name__var: "\
+    even-(horizontal|vertical)|\
+    main-(horizontal(-mirrored)?|vertical(-mirrored)?)|tiled"
+
+  # Ref: Manual page: Hooks
+  # TODO: Don't know what control mode does...
+  # > All the notifications listed in the CONTROL MODE section are hooks (without any arguments), except %exit.
+  hook_name__var: "\
+    alert-(activity|bell|silence)|\
+    client-(active|attached|detached|focus-(in|out)|resized|session-changed)|\
+    client-(light|dark)-theme|\
+    command-error|\
+    pane-(died|exited|focus-(in|out)|set-clipboard)|\
+    session-(created|closed|renamed)|\
+    window-(layout-changed|linked|renamed|resized|unlinked)"
+
+  # Track keywords "deprecate" and "no longer" in:
+  # https://github.com/tmux/tmux/blob/master/CHANGES
+  invalid__var: "mouse-(resize-pane|select-(pane|window))|mode-mouse"
